@@ -1,0 +1,15 @@
+Super-parentheses in Interlisp
+------------------------------
+
+(let* [(x 1) (y (+ x 3] (+ x y)) is syntactically valid in Interlisp,
+
+The [ creates an "anchor", the ] then closes as many parentheses as
+necessary to go back to that level.
+
+They can be nested too.
+
+The [ and ] are not just keyboard commands in the editor user
+interface, they are actually saved as such into the source file.
+
+However, the "new" sedit editor doesn't support inserting them. It
+converts them to normal parentheses.
