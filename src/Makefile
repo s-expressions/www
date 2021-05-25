@@ -98,7 +98,7 @@ uninstall: stop
 
 
 clean: 
-	rm -r gen
+	rm -rf gen
 
 
 
