@@ -38,6 +38,7 @@ cd PROJECT_DIR && make stop
 ```
 ### Uninstalling the site
 **Warning: 'make uninstall' is not idempotent.** Executing the command more than once between installs will remove any backups of a previous installation.
+
 The following should be executed by a user with administrative priveleges granted in the '/etc/doas.conf' file:
 ```
 cd PROJECT_DIR && make uninstall
@@ -50,5 +51,7 @@ cd PROJECT_DIR && make clean
 ## Help
 
 Any questions, comments or requests for technical advice should be directed to:
-[Steven Wiley](https://https://github.com/orgs/s-expressions/people/s-wiley)
-or any [members](https://https://github.com/orgs/s-expressions/people) of the S-expressions organization.
+
+[Steven Wiley](https://github.com/orgs/s-expressions/people/s-wiley)
+
+or any [members](https://github.com/orgs/s-expressions/people) of the S-expressions organization.
