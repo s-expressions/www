@@ -22,24 +22,24 @@ The goal of this project is to provide a website for the S-expressions' organiza
 cd PROJECT_DIR && make
 ```
 ### Installing the site
-The following should be executed by a user with administrative priveleges granted in the '/etc/doas.conf' file:
+The following should be executed by a user with administrative privileges granted in the '/etc/doas.conf' file:
 ```
 cd PROJECT_DIR && make install
 ```
 ### Starting the server(s)
-The following should be executed by a user with administrative priveleges granted in the '/etc/doas.conf' file:
+The following should be executed by a user with administrative privileges granted in the '/etc/doas.conf' file:
 ```
 cd PROJECT_DIR && make start
 ```
 ### Stopping the server(s)
-The following should be executed by a user with administrative priveleges granted in the '/etc/doas.conf' file:
+The following should be executed by a user with administrative privileges granted in the '/etc/doas.conf' file:
 ```
 cd PROJECT_DIR && make stop
 ```
 ### Uninstalling the site
 **Warning: 'make uninstall' is not idempotent.** Executing the command more than once between installs will remove any backups of a previous installation.
 
-The following should be executed by a user with administrative priveleges granted in the '/etc/doas.conf' file:
+The following should be executed by a user with administrative privileges granted in the '/etc/doas.conf' file:
 ```
 cd PROJECT_DIR && make uninstall
 ```
