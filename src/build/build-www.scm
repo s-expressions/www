@@ -21,7 +21,7 @@
     (create-directory "gen/etc" #t)
 
     (map (lambda (file-name)
-	   (copy-file (string-append "config/etc/" file-name)
+	   (copy-file (string-append "src/config/etc/" file-name)
 		      (string-append "gen/etc/" file-name)
 		      #t))
 	 '("httpd.conf" "acme-client.conf"))
@@ -38,7 +38,7 @@
     (let* ((doc-root "/htdocs/org.s-expressions")
 	   (www-dir "gen/var/www")
 	   (output-dir (string-append www-dir doc-root "/pages"))
-	   (input-dir "content/pages")
+	   (input-dir "src/content/pages")
 	   )
 
       (create-directory output-dir #t)

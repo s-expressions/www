@@ -29,7 +29,7 @@ htdocs_dir = $(www_dir)/htdocs
 resources_dir = $(htdocs_dir)/resources
 icons_dir = $(resources_dir)/icons
 
-favicon_dir = content/resources/icons/favicon
+favicon_dir = src/content/resources/icons/favicon
 favicon_src = $(favicon_dir)/favicon_64x64.png $(favicon_dir)/favicon_48x48.png $(favicon_dir)/favicon_32x32.png $(favicon_dir)/favicon_24x24.png $(favicon_dir)/favicon_16x16.png
 favicon = gen/$(icons_dir)/favicon.ico
 
@@ -48,10 +48,10 @@ build: bak_cfg chk_out $(favicon)
 	if ! chicken-status -c | grep regex; then doas chicken-install regex; fi
 
 	mkdir -p gen/etc gen/var
-	rsync -a config/etc/ gen/etc/
-	rsync -a config/var/ gen/var/
+	rsync -a src/config/etc/ gen/etc/
+	rsync -a src/config/var/ gen/var/
 
-	$(csi) -s build/build-all.scm
+	$(csi) -s src/build/build-all.scm
 
 
 install: stop
