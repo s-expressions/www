@@ -46,12 +46,15 @@ build: bak_cfg chk_out $(favicon)
 	if ! chicken-status -c | grep r7rs; then doas chicken-install r7rs; fi
 #	if ! chicken-status -c | grep srfi-13; then doas chicken-install srfi-13; fi
 	if ! chicken-status -c | grep regex; then doas chicken-install regex; fi
+#	if ! chicken-status -c | grep symbol-utils; then doas chicken-install symbol-utils; fi
 
 	mkdir -p gen/etc gen/var
 	rsync -a src/config/etc/ gen/etc/
 	rsync -a src/config/var/ gen/var/
 
-	$(csi) -s src/build/build-all.scm
+	$(csi) -s src/build/build-config.scm
+	$(csi) -s src/build/build-pages.scm
+	$(csi) -keyword-style none -s src/build/build-styles.scm
 
 
 install: stop

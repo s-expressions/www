@@ -1,35 +1,14 @@
-(import (scheme time))
-(import (chicken file)
-	(chicken pretty-print)
-	)
+(import (r7rs)
+	(scheme time))
 
-(import (s-expressions s-markup html))
+(import (chicken file))
 
-
-(define build-www
-  (lambda ()
-    (display "building www..." )(newline)
-   
-    (build-config)
-    (build-pages)
-   
-    ))
-
-
-(define build-config
-  (lambda ()
-    (create-directory "gen/etc" #t)
-
-    (map (lambda (file-name)
-	   (copy-file (string-append "src/config/etc/" file-name)
-		      (string-append "gen/etc/" file-name)
-		      #t))
-	 '("httpd.conf" "acme-client.conf"))
-    ))
-
+(include "lib/s-expressions/s-markup/html/library.scm")
+(import	(s-expressions s-markup html))
 
 (define build-pages
   (lambda ()
+    (display "building pages...")(newline)
     (build-page "home")
     ))
 
@@ -50,3 +29,4 @@
       )
     ))
 
+(build-pages)
