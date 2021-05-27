@@ -4,7 +4,7 @@ This project is used to configure and build the s-expressions.org website.
 
 ## Description
 
-The goal of this project is to provide a website for the S-expressions' organization.  The website will display information about the organization and its projects.  The website will be organized with subdomains specific to projects.  The website will be built automatically using the information contained in the organization's GitHub repositories.  The project is also intended to demonstrate the utility of S-expressions in declarative programming.
+The goal of this project is to provide a website for the S-expressions organization.  The website will display information about the organization and its projects.  The website will be organized with subdomains specific to projects.  The website will be built automatically using the information contained in the organization's GitHub repositories.  The project is also intended to demonstrate the utility of S-expressions in declarative programming.
 
 ## Getting Started
 
