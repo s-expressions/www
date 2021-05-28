@@ -8,14 +8,6 @@ csi = chicken-csi
 image_magick_ver = 6.9.12.2
 image_magick_pkg = ImageMagick-$(image_magick_ver)
 
-
-nsd_conf = var/nsd/etc/nsd.conf
-nsd_conf_bak = /$(nsd_conf).bak
-
-zones_dir = var/nsd/zones
-zones_bak = /$(zones_dir).bak
-
-
 acme_client_conf = etc/acme-client.conf
 acme_client_conf_bak = /$(acme_client_conf).bak
 
@@ -64,40 +56,28 @@ install: stop
 
 	doas rsync -rt --delete gen/var/www/ /var/www/
 
-	doas rsync -rt gen/var/nsd/etc/ /var/nsd/etc/
-	doas rsync -rt gen/var/nsd/zones /var/nsd/
-
-
 	doas rcctl enable httpd
-	doas rcctl enable nsd
+
 
 start: 
 	doas rcctl restart httpd
-	doas rcctl restart nsd
 
 
 stop: 
 	doas rcctl stop httpd
-	doas rcctl stop nsd
+
 
 uninstall: stop
 	doas rcctl disable httpd
-	doas rcctl disable nsd
 
 	doas rm -rf /$(www_dir)
 	if [ -d "$(www_bak)" ]; then doas mv $(www_bak) /$(www_dir); fi
-
-	doas rm -rf /$(zones_dir)
-	if [ -d "$(zones_bak)" ]; then doas mv $(zones_bak) /$(zones_dir); fi
 
 	doas rm -f /$(acme_client_conf)
 	if [ -f "$(acme_client_conf_bak)" ]; then doas mv $(acme_client_conf_bak) /$(acme_client_conf); fi
 
 	doas rm -f /$(httpd_conf)
 	if [ -f "$(httpd_conf_bak)" ]; then doas mv $(httpd_conf_bak) /$(httpd_conf); fi
-
-	doas rm -f /$(nsd_conf)
-	if doas [ -f "$(nsd_conf_bak)" ]; then doas mv $(nsd_conf_bak) /$(nsd_conf); fi
 
 
 clean: 
@@ -106,11 +86,7 @@ clean:
 
 
 
-bak_cfg: $(httpd_conf_bak) $(www_bak) $(zones_bak) $(acme_client_conf_bak)
-	if doas [ -f "$/(nsd_conf)" ] && doas [ ! -f "$(nsd_conf_bak)" ] ; then echo "backing up /$(nsd_conf)..."; doas rsync -a /$(nsd_conf) $(nsd_conf_bak); fi
-
-$(zones_bak):
-	if [ -d "/$(zones_dir)" ]; then echo "backing up /$(zones_dir)..."; doas rsync -a /$(zones_dir)/ $(zones_bak); fi
+bak_cfg: $(httpd_conf_bak) $(www_bak) $(acme_client_conf_bak)
 
 
 $(acme_client_conf_bak):
