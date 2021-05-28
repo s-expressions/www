@@ -44,8 +44,8 @@ build: bak_cfg chk_out $(favicon)
 	rsync -a src/config/etc/ gen/etc/
 	rsync -a src/config/var/ gen/var/
 
-	$(csi) -s src/build/build-config.scm
-	$(csi) -s src/build/build-pages.scm
+	$(csi) -keyword-style suffix -s src/build/build-config.scm
+	$(csi) -keyword-style suffix -s src/build/build-pages.scm
 	$(csi) -keyword-style none -s src/build/build-styles.scm
 
 
