@@ -4,7 +4,7 @@
 	      (Link rel: "icon" href: ,(string-append "https://www.s-expressions.org/favicon.ico?" *time-stamp*))
 	      (link rel: "stylesheet" type: "text/css" href: ,(string-append "https://www.s-expressions.org/styles/style.css?" *time-stamp*))
 	      )
-	(body "s-expressions.org/home" (br) ,*time-stamp*)
+	(body "s-expressions.org/contact" (br) ,*time-stamp*)
 	)
   )
 
