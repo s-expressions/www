@@ -28,18 +28,24 @@ favicon = gen/$(icons_dir)/favicon.ico
 
 
 .PHONY: all build install start stop uninstall clean test
-.PHONY: bak_cfg chk_out
+.PHONY: req_pkg bak_cfg chk_out
 
 
 all: build
 
-build: bak_cfg chk_out $(favicon)
+req_pkg:
+	if ! pkg_info -e $(rsync_pkg); then echo 'installing $(rsync_pkg)'; doas pkg_add $(rsync_pkg); fi
+
 	if ! pkg_info -e $(chicken_pkg); then echo 'installing $(chicken_pkg)'; doas pkg_add $(chicken_pkg); fi
 	if ! chicken-status -c | grep r7rs; then doas chicken-install r7rs; fi
 #	if ! chicken-status -c | grep srfi-13; then doas chicken-install srfi-13; fi
 	if ! chicken-status -c | grep regex; then doas chicken-install regex; fi
 #	if ! chicken-status -c | grep symbol-utils; then doas chicken-install symbol-utils; fi
 
+	if ! pkg_info -e $(image_magick_pkg); then echo 'installing $(image_magick_pkg)'; doas pkg_add $(image_magick_pkg); fi
+
+
+build: req_pkg bak_cfg chk_out $(favicon)
 	mkdir -p gen/etc gen/var
 	rsync -a src/config/etc/ gen/etc/
 	rsync -a src/config/var/ gen/var/
@@ -50,8 +56,6 @@ build: bak_cfg chk_out $(favicon)
 
 
 install: stop
-	if ! pkg_info -e $(rsync_pkg); then echo 'installing $(rsync_pkg)'; doas pkg_add $(rsync_pkg); fi
-
 	doas rsync -rt gen/etc/ /etc/
 
 	doas rsync -rt --delete gen/var/www/ /var/www/
@@ -108,7 +112,6 @@ chk_out:
 
 $(favicon):
 	echo "building favicon..."
-	if ! pkg_info -e $(image_magick_pkg); then echo 'installing $(image_magick_pkg)'; doas pkg_add $(image_magick_pkg); fi
 	mkdir -p gen/$(icons_dir)
 	convert -background transparent $(favicon_src) $(favicon)
 
