@@ -1,9 +1,19 @@
-(import (r7rs))
-(import (chicken file))
+(import (r7rs)
+	(scheme time)
+	(chicken file)
+	)
 
 (include "lib/s-expressions/s-config/css/library.scm")
 (import	(s-expressions s-config css))
 
+(define site-url (lambda () "https://www.s-expressions.org"))
+
+
+(define time-stamp (let ((time-stamp (number->string (inexact->exact (current-second)))))
+			 (lambda () time-stamp)))
+(define img-src (lambda (image-name) (string-append (site-url) "/images/" image-name "?" (time-stamp))))
+
+(define bg-url (lambda (image-name) (string-append "url(" (img-src image-name) ")")))
 
  (define build-style
    (lambda (name)
@@ -26,7 +36,7 @@
  (define build-styles
    (lambda ()
      (display "building styles..." )(newline)
-     (build-style "style")
+     (build-style "main")
      ))
 
 

@@ -114,5 +114,4 @@ $(favicon):
 	echo "building favicon..."
 	mkdir -p gen/$(icons_dir)
 	convert -background transparent $(favicon_src) $(favicon)
-
-
+	rsync -a $(favicon_dir)/*.png gen/$(icons_dir)/
