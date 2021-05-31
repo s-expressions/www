@@ -53,8 +53,8 @@ build: req_pkg bak_cfg chk_out $(favicon)
 	rsync -a src/content/resources/images/*.png gen/var/www/htdocs/resources/images/
 	rsync -a src/content/resources/scripts/*.js gen/var/www/htdocs/resources/scripts/
 
-	$(csi) -keyword-style suffix -s src/build/build-config.scm
-	$(csi) -keyword-style suffix -s src/build/build-pages.scm
+	$(csi) -keyword-style none -s src/build/build-config.scm
+	$(csi) -keyword-style none -s src/build/build-pages.scm
 	$(csi) -keyword-style none -s src/build/build-styles.scm
 
 

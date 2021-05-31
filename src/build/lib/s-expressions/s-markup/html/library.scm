@@ -2,15 +2,28 @@
   (import (scheme base)
 	  (scheme write)
 
-	  (chicken keyword)
+	  ;; (chicken keyword)
 	  (chicken port)
 	  (regex)
+
 	  )
 
   (export display-html write-html)
 
   (begin 
 
+    (define keyword? 
+      (lambda (obj)
+	(and (symbol? obj)
+	     (equal? (car (reverse (string->list (symbol->string obj)))) #\: ))))
+    
+
+
+    (define keyword->string
+      (lambda (obj)
+	(list->string (reverse (cdr (reverse (string->list (symbol->string obj))))))))
+
+    
     (define debug-html-linebreak "")
 
     (define replace-special-chars
@@ -43,6 +56,7 @@
 
     (define sxml->html 
       (lambda (element)
+
 	(string-append (cond ((char? element) (cond ((equal? element #\space) "&nbsp;")
 						    (else (error "unknown character"))))
 			     

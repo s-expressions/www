@@ -67,12 +67,7 @@
   (lambda (path)
 
     (let ((content (with-input-from-file (string-append "src/content/pages/" path ".scm") (lambda () (set! *current-path* path) 
-											     (begin (newline)
-												    (display "<--------got here")(newline)
-												    (display "path: ")(write path)(newline)
-												    (newline))
 											     (eval (read))
-
 											     )))
 
 
@@ -82,7 +77,11 @@
       (set! *current-content* content)
       (set! *current-path* path)
       (create-directory (pathname-directory output-file))
-      (with-output-to-file output-file (lambda () (display-html (eval page-template)) (newline))))))
+
+      (with-output-to-file output-file (lambda () (display-html (eval page-template)) (newline)))
+
+
+      )))
 
 
 ;; ;; (define build-page

@@ -76,7 +76,7 @@
    height: "89px"
    )
   ("#k-logo"
-   width: "184px"
+   width: "267px" padding-left: "9px"
    height: "38px"
 
    float: "left"
@@ -86,8 +86,8 @@
 
    background-color: "white"
 
-   border-radius: "19px 2px 2px 19px"
-   -web-kit-border-radius: "19px 2px 2px 19px"
+   border-radius: "8px"
+   -web-kit-border-radius: "8px"
 
    box-shadow: "2px 2px 2px #999, inset 0px 0px 2px 0px #888"
    -webkit-box-shadow: "2px 2px 2px #999, inset 0px 0px 2px 0px #888"
