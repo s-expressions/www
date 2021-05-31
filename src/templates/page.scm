@@ -32,11 +32,11 @@
 
 					    (if (equal? (current-path) "home")
 						`((div ;;id: "k-logo"
-						     (img width: "184" height: "38" src: ,(img-src "s-expressions-logo.svg") alt: "(S-EXPRESSIONS . ORG)")))
+						     (img width: "258" height: "38" src: ,(img-src "s-expressions-logo.svg") alt: "(S-EXPRESSIONS . ORG)")))
 
 						`((a ;;id: "k-logo"
 						     href: ,(string-append (site-url) "/home")
-						     (img width: "184" height: "38" src: ,(img-src "s-expressions-logo.svg") alt: "(S-EXPRESSIONS . ORG)")))
+						     (img width: "258" height: "38" src: ,(img-src "s-expressions-logo.svg") alt: "(S-EXPRESSIONS . ORG)")))
 						)
 
 					    ))
