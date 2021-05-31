@@ -83,7 +83,7 @@
 	   (aliases (if (> (length rest) 1) (list-ref rest 1) #f))
 
 	   (label (string-titlecase item))
-	   (href (string-append "https://www.katchitek.com" location))
+	   (href (string-append "https://www.s-expressions.org" location))
 	   
 	   (file-name (string-append "var/www/htdocs/resources/images/nav-tab_" url-name ".svg"))
 	   (select-file-name (string-append "var/www/htdocs/resources/images/nav-tab_" url-name "_select.svg"))
@@ -154,7 +154,7 @@
 
 
 	   (label (string-titlecase (irregex-replace/all "-" item " ")))
-	   (href (string-append "https://www.katchitek.com" location))
+	   (href (string-append "https://www.s-expressions.org" location))
 	   
 	   (file-name (string-append "var/www/htdocs/resources/images/nav-label_" url-name ".svg"))
 	   (highlight-file-name (string-append "var/www/htdocs/resources/images/nav-label_" url-name "_highlight.svg"))

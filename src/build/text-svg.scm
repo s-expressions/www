@@ -60,7 +60,7 @@
 
 	       (fill color)
 	       )
-	  
+
 	  (with-output-to-file file-name
 	    (lambda ()
 	      (display-xml `((?xml version: "1.0" encoding: "utf-8")

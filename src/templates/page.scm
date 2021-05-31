@@ -32,31 +32,28 @@
 
 					    (if (equal? (current-path) "home")
 						`((div id: "k-logo"
-						     (img width: "258" height: "38" src: ,(img-src "s-expressions-logo.svg") alt: "(S-EXPRESSIONS . ORG)")))
+						     (img width: "258" height: "38" src: ,(img-src "page/header/s-expressions-logo.svg") alt: "(S-EXPRESSIONS . ORG)")))
 
 						`((a id: "k-logo"
 						     href: ,(string-append (site-url) "/home")
-						     (img width: "258" height: "38" src: ,(img-src "s-expressions-logo.svg") alt: "(S-EXPRESSIONS . ORG)")))
+						     (img width: "258" height: "38" src: ,(img-src "page/header/s-expressions-logo.svg") alt: "(S-EXPRESSIONS . ORG)")))
 						)
 
 					    ))
-			   ;; (nav class: "k-site"
-			   ;; 	,(append '(div class: "k-content" 
-			   ;; 		       (div id: "margin-spacer" class: "k-separator"))
+			   (nav class: "k-site"
+			   	,(append '(div class: "k-content" 
+			   		       (div id: "margin-spacer" class: "k-separator"))
 
 
-			   ;; 		     `(,(include "../templates/toolbar.scm")
+			   		     `(,(include "../templates/toolbar.scm")
 
-			   ;; 		       (div class: "k-separator")
+			   		       (div class: "k-separator")
 
-			   ;; 		       ,(include "../templates/menu.scm")
+			   		       ,(include "../templates/menu.scm")
 	
-			   ;; 		       (div class: "k-separator")
+			   		       ;; (div class: "k-separator")
 
-			   ;; 		       (!-- "$NAVIGATION:CART")
-					       
-					     
-			   ;; 		     )))
+			   		     )))
 			   )
 		     (append (let ((project (project-page? (current-path))))
 			       (if project

@@ -63,26 +63,26 @@
    margin-top: "-200px" margin-bottom: "-200px" padding-top: "200px"	;;/* use footer height */	
 
    min-width: "760px"
-   background-image: ,(bg-url "page-background.png")
+   background-image: ,(bg-url "page/page-background.png")
 
    )
 
   ;; /*********************************************************/
 
   ("header.k-site" ;"header.k-site .k-content"
-   background-image: ,(bg-url "header-background.png")
+   ;; background-image: ,(bg-url "header-background.png")
    )
   ("header.k-site .k-content"
    height: "89px"
    )
   ("#k-logo"
-   width: "267px" padding-left: "9px"
+   width: "267px" padding-left: "11px"
    height: "38px"
 
    float: "left"
    position: "relative"
    top: "24px"
-   left: "29px"
+   left: "18px"
 
    background-color: "white"
 
@@ -298,7 +298,7 @@
    )
 
   ("nav.k-site" ;"nav.k-site .k-content"
-   background-image: ,(bg-url "navigation-background.png")
+   background-image: ,(bg-url "page/navigation/navigation-background.png")
    )
   ("nav.k-site .k-content"
    height: "63px"
@@ -310,7 +310,7 @@
    width: "1px"
    height: "62px"
    
-   background-image: ,(bg-url "navigation-separator.png")
+   background-image: ,(bg-url "page/navigation/navigation-separator.png")
    )
 
   ("#margin-spacer"
@@ -323,8 +323,8 @@
    float: "left" 
    height: "16px"
 
-   border-top: "1px solid #6a6a6c"
-   border-bottom: "1px solid #747577"
+   border-top: "1px solid #AF985E"
+   border-bottom: "1px solid #AF985E"
 
    margin-left: "6px"margin-right: "6px"margin-top: "23px"
    ;; padding-top: "1px"
@@ -336,10 +336,10 @@
 
   ("a.k-toolbutton"
    cursor: "pointer"
-   background-image: ,(bg-url "toolbar-background.png")
+   background-image: ,(bg-url "page/navigation/toolbar-background.png")
    )
   ("a.k-toolbutton:hover" "div.k-toolbutton"
-   background-image: ,(bg-url "toolbar-background-selected.png")
+   background-image: ,(bg-url "page/navigation/toolbar-background-selected.png")
    )
 
   (".k-toolbutton img"
@@ -350,14 +350,14 @@
    margin-left: "36px"
    )
 
-  ("a#k-home-button img" background-image: ,(bg-url "nav-icon_home.svg"))
-  ("a#k-home-button:hover img" "div#k-home-button img" background-image: ,(bg-url "nav-icon_home_highlight.svg"))
+  ("a#k-home-button img" background-image: ,(bg-url "page/navigation/nav-icon_home.svg"))
+  ("a#k-home-button:hover img" "div#k-home-button img" background-image: ,(bg-url "page/navigation/nav-icon_home_highlight.svg"))
 
-  ("a#k-contact-button img" background-image: ,(bg-url "nav-icon_contact.svg"))
-  ("a#k-contact-button:hover img" "div#k-contact-button img" background-image: ,(bg-url "nav-icon_contact_highlight.svg"))
+  ("a#k-contact-button img" background-image: ,(bg-url "page/navigation/nav-icon_contact.svg"))
+  ("a#k-contact-button:hover img" "div#k-contact-button img" background-image: ,(bg-url "page/navigation/nav-icon_contact_highlight.svg"))
 
-  ("a#k-site-map-button img" background-image: ,(bg-url "nav-icon_site-map.svg"))
-  ("a#k-site-map-button:hover img" "div#k-site-map-button img" background-image: ,(bg-url "nav-icon_site-map_highlight.svg"))
+  ("a#k-site-map-button img" background-image: ,(bg-url "page/navigation/nav-icon_site-map.svg"))
+  ("a#k-site-map-button:hover img" "div#k-site-map-button img" background-image: ,(bg-url "page/navigation/nav-icon_site-map_highlight.svg"))
 
   ("#k-site-map-button"
    margin-right: "36px"
@@ -1043,7 +1043,7 @@
    )
   ("footer.k-site" ;"footer .k-content"
    ;; should not need page edges
-   background-image: ,(bg-url "site-footer-background.png")
+   background-image: ,(bg-url "page/footer/site-footer-background.png")
    )
   ("footer.k-site .k-content"
    height: "200px"
