@@ -33,21 +33,26 @@
 
    border-top: "1px solid #AF985E"
    border-bottom: "1px solid #AF985E"
+   border-left: "1px solid #AF985E"
+   border-right: "1px solid #AF985E"
+
+   ;; background-color: "#8A794E"
 
    margin-left: "6px"margin-right: "6px"margin-top: "23px"
    ;; padding-top: "1px"
 
-   padding-left: "1px"
-   padding-right: "1px"
+   ;; padding-left: "1px"
+   ;; padding-right: "1px"
+
    )
   
 
   ("a.k-toolbutton"
    cursor: "pointer"
-   background-image: ,(bg-url "page/navigation/toolbar-background.png")
+   ;; background-image: ,(bg-url "page/navigation/toolbar-background.png")
    )
   ("a.k-toolbutton:hover" "div.k-toolbutton"
-   background-image: ,(bg-url "page/navigation/toolbar-background-selected.png")
+   ;; background-image: ,(bg-url "page/navigation/toolbar-background-selected.png")
    )
 
   (".k-toolbutton img"
@@ -58,14 +63,54 @@
    margin-left: "36px"
    )
 
-  ("a#k-home-button img" background-image: ,(bg-url "page/navigation/nav-icon_home.svg"))
-  ("a#k-home-button:hover img" "div#k-home-button img" background-image: ,(bg-url "page/navigation/nav-icon_home_highlight.svg"))
+  ("a#k-home-button img" 
+   background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
+   background-size: "51px 32px"
+   background-position: "0px 0px"
+   )
+  ("a#k-home-button:hover img" "div#k-home-button img"
+   background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
+   background-size: "51px 32px"
+   background-position: "0px -16px"
+   )
+ 
 
-  ("a#k-contact-button img" background-image: ,(bg-url "page/navigation/nav-icon_contact.svg"))
-  ("a#k-contact-button:hover img" "div#k-contact-button img" background-image: ,(bg-url "page/navigation/nav-icon_contact_highlight.svg"))
 
-  ("a#k-site-map-button img" background-image: ,(bg-url "page/navigation/nav-icon_site-map.svg"))
-  ("a#k-site-map-button:hover img" "div#k-site-map-button img" background-image: ,(bg-url "page/navigation/nav-icon_site-map_highlight.svg"))
+  ("a#k-contact-button img" 
+   background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
+   background-size: "51px 32px"
+   background-position: "-17px -0px"
+   )
+  ("a#k-contact-button:hover img" "div#k-contact-button img"
+   background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
+   background-size: "51px 32px"
+   background-position: "-17px -16px"
+   )
+ 
+
+
+  ("a#k-site-map-button img" 
+   background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
+   background-size: "51px 32px"
+   background-position: "-34px 0px"
+   )
+  ("a#k-site-map-button:hover img" "div#k-site-map-button img"
+   background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
+   background-size: "51px 32px"
+   background-position: "-34px -16px"
+   )
+  
+
+
+
+  ;; ("a#k-home-button img" background-image: ,(bg-url "page/navigation/nav-icon_home.svg"))
+  ;; ("a#k-home-button:hover img" "div#k-home-button img" background-image: ,(bg-url "page/navigation/nav-icon_home_highlight.svg"))
+
+  ;; ("a#k-contact-button img" background-image: ,(bg-url "page/navigation/nav-icon_contact.svg"))
+  ;; ("a#k-contact-button:hover img" "div#k-contact-button img" background-image: ,(bg-url "page/navigation/nav-icon_contact_highlight.svg"))
+
+  ;; ("a#k-site-map-button img" background-image: ,(bg-url "page/navigation/nav-icon_site-map.svg"))
+  ;; ("a#k-site-map-button:hover img" "div#k-site-map-button img" background-image: ,(bg-url "page/navigation/nav-icon_site-map_highlight.svg"))
 
   ("#k-site-map-button"
    margin-right: "36px"
