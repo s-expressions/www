@@ -54,19 +54,19 @@
 				 (else '()))))
 		       (directory dir)))))
 
-(define page-paths (get-paths "src/content/pages"))
+(define page-paths (get-paths "src/www/content"))
 
 (display "page-paths: ")(write page-paths)(newline)
 
 
 
-(define page-template (with-input-from-file "src/templates/page.scm" (lambda () (read))))
-(define toolbar-template (with-input-from-file "src/templates/toolbar.scm" (lambda () (read))))
+(define page-template (with-input-from-file "src/www/templates/page.scm" (lambda () (read))))
+(define toolbar-template (with-input-from-file "src/www/templates/toolbar.scm" (lambda () (read))))
 
 (define build-page
   (lambda (path)
 
-    (let ((content (with-input-from-file (string-append "src/content/pages/" path ".scm") (lambda () (set! *current-path* path) 
+    (let ((content (with-input-from-file (string-append "src/www/content/" path ".scm") (lambda () (set! *current-path* path) 
 											     (eval (read))
 											     )))
 
@@ -84,22 +84,6 @@
       )))
 
 
-;; ;; (define build-page
-;; ;;   (lambda (name)
-;; ;;     (let* ((doc-root "/htdocs")
-;; ;; 	   (www-dir "gen/var/www")
-;; ;; 	   (output-dir (string-append www-dir doc-root "/pages"))
-;; ;; 	   (input-dir "src/content/pages")
-;; ;; 	   )
-
-;; ;;       (create-directory output-dir #t)
-;; ;;       (with-output-to-file (string-append output-dir "/" name ".html") 
-;; ;; 	(lambda () 
-;; ;; 	  (display-html (eval (with-input-from-file (string-append input-dir "/" name ".scm") (lambda () (read)))))
-;; ;; 	  (newline)
-;; ;; 	  ))
-;; ;;       )
-;; ;;     ))
 
 
 (define build-pages

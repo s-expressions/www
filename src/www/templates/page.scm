@@ -48,11 +48,11 @@
 			   		       (div id: "margin-spacer" class: "k-separator"))
 
 
-			   		     `(,(include "../templates/toolbar.scm")
+			   		     `(,(include "www/templates/toolbar.scm")
 
 			   		       (div class: "k-separator")
 
-			   		       ,(include "../templates/menu.scm")
+			   		       ,(include "www/templates/menu.scm")
 	
 			   		       ;; (div class: "k-separator")
 
@@ -60,7 +60,7 @@
 			   )
 		     (append (let ((project (project-page? (current-path))))
 			       (if project
-				   (with-input-from-file (string-append "src/templates/" project ".scm") (lambda () (eval (read))))
+				   (with-input-from-file (string-append "src/www/templates/" project ".scm") (lambda () (eval (read))))
 				   '()))
 
 			     `(,(current-content))

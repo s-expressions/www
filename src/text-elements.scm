@@ -1,4 +1,4 @@
-(define helios-svg (include "../content/resources/fonts/helios-cond-bold.scm"))
+(define helios-svg (include "www/resources/fonts/helios-cond-bold.scm"))
 
 
 (define input-img

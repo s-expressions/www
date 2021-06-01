@@ -7,7 +7,7 @@
     (create-directory "gen/etc" #t)
 
     (map (lambda (file-name)
-	   (copy-file (string-append "src/config/etc/" file-name)
+	   (copy-file (string-append "src/www/config/etc/" file-name)
 		      (string-append "gen/etc/" file-name)
 		      #t))
 	 '("httpd.conf" "acme-client.conf"))

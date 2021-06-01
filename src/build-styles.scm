@@ -20,7 +20,7 @@
      (let* ((doc-root "/htdocs")
 	    (www-dir "gen/var/www")
 	    (output-dir (string-append www-dir doc-root "/resources/styles"))
-	    (input-dir "src/content/resources/styles")
+	    (input-dir "src/www/resources/styles")
 	    )
 
        (create-directory output-dir #t)

@@ -21,7 +21,7 @@ htdocs_dir = $(www_dir)/htdocs
 resources_dir = $(htdocs_dir)/resources
 icons_dir = $(resources_dir)/icons
 
-favicon_dir = src/content/resources/icons/favicon
+favicon_dir = src/www/resources/icons/favicon
 favicon_src = $(favicon_dir)/favicon_64x64.png $(favicon_dir)/favicon_48x48.png $(favicon_dir)/favicon_32x32.png $(favicon_dir)/favicon_24x24.png $(favicon_dir)/favicon_16x16.png
 favicon = gen/$(icons_dir)/favicon.ico
 
@@ -48,14 +48,14 @@ req_pkg:
 build: req_pkg bak_cfg chk_out $(favicon)
 	mkdir -p gen/etc gen/var gen/var/www/htdocs/resources/images
 
-	rsync -a src/config/etc/ gen/etc/
-	rsync -a src/config/var/ gen/var/
-	rsync -a --exclude="_design" src/content/resources/images/ gen/var/www/htdocs/resources/images/
-	rsync -a src/content/resources/scripts/*.js gen/var/www/htdocs/resources/scripts/
+	rsync -a src/www/config/etc/ gen/etc/
+	rsync -a src/www/config/var/ gen/var/
+	rsync -a --exclude="_design" src/www/resources/images/ gen/var/www/htdocs/resources/images/
+	rsync -a src/www/resources/scripts/*.js gen/var/www/htdocs/resources/scripts/
 
-	$(csi) -keyword-style none -s src/build/build-config.scm
-	$(csi) -keyword-style none -s src/build/build-pages.scm
-	$(csi) -keyword-style none -s src/build/build-styles.scm
+	$(csi) -keyword-style none -s src/build-config.scm
+	$(csi) -keyword-style none -s src/build-pages.scm
+	$(csi) -keyword-style none -s src/build-styles.scm
 
 
 install: stop
