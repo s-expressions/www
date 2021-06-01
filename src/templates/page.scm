@@ -16,7 +16,10 @@
 			(link rel: "apple-touch-icon" sizes: "152x152" href: "https://www.s-expressions.org/icons/favicon_152x152.png")
 			(link rel: "apple-touch-icon" sizes: "180x180" href: "https://www.s-expressions.org/icons/favicon_180x180.png")
 
-			(link rel: "stylesheet" type: "text/css" href: ,(string-append (site-url) "/styles/main.css?" (time-stamp)))
+			(link rel: "stylesheet" type: "text/css" href: ,(string-append (site-url) "/styles/page.css?" (time-stamp)))
+			(link rel: "stylesheet" type: "text/css" href: ,(string-append (site-url) "/styles/header.css?" (time-stamp)))
+			(link rel: "stylesheet" type: "text/css" href: ,(string-append (site-url) "/styles/navigation.css?" (time-stamp)))
+			(link rel: "stylesheet" type: "text/css" href: ,(string-append (site-url) "/styles/footer.css?" (time-stamp)))
 			(script type: "text/javascript" src: ,(string-append (site-url) "/scripts/set-page-height.js?" (time-stamp)))
 			(script type: "text/javascript" src: ,(string-append (site-url) "/scripts/preload-images.js?" (time-stamp)))
 			(!-- "$NAVIGATION:HEAD")

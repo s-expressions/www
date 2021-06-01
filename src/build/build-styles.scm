@@ -36,7 +36,7 @@
  (define build-styles
    (lambda ()
      (display "building styles..." )(newline)
-     (build-style "main")
+     (map build-style '("page" "header" "navigation" "footer"))
      ))
 
 
