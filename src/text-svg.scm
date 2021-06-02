@@ -8,7 +8,7 @@
     (define cache-entry (assoc file-name *image-cache*))
 
     (if cache-entry (cdr cache-entry)
-	
+
 	(let* ((svg-element (get-element-by-type 'svg font))
 	       (defs-element (get-element-by-type 'defs (get-children svg-element)))
 	       (font-element (get-element-by-type 'font (get-children defs-element)))
@@ -83,9 +83,9 @@
 				      
 				      (if (null? shadow-args) '()
 					  `((use xlink:href: "#text" 
-						 fill: ,shadow-color transform: ,(string-append "scale(" (number->string scale) ") translate (" shadow-offset-x ", " shadow-offset-y ")"))))
+						 fill: ,shadow-color transform: ,(string-append "scale(" (number->string (exact->inexact scale)) ") translate (" shadow-offset-x ", " shadow-offset-y ")"))))
 				      `((use xlink:href: "#text" 
-					     fill: ,fill transform: ,(string-append "scale(" (number->string scale) ") translate (0, " ascent ")")))
+					     fill: ,fill transform: ,(string-append "scale(" (number->string (exact->inexact scale)) ") translate (0, " ascent ")")))
 
 				      )))))
 

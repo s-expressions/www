@@ -4,7 +4,7 @@
 (define input-img
   (lambda (label)
     (let* ((url-name (url-encode (string-downcase label)))
-	   (file-name (string-append "var/www/htdocs/resources/images/input-image_" url-name ".svg"))
+	   (file-name (string-append "gen/var/www/htdocs/resources/images/input-image_" url-name ".svg"))
 	   (src (img-src (string-append "input-image_" (url-encode url-name) ".svg")))
 	   (dim (write-text-svg-to-file file-name label helios-svg 14 "#fff"))
 	   (width (number->string (car dim)))
@@ -18,7 +18,7 @@
   (lambda (item)
     (let* ((url-name (url-encode (string-downcase item)))
 	   (label item); (string-titlecase item))
-	   (file-name (string-append "var/www/htdocs/resources/images/section-title_" url-name ".svg"))
+	   (file-name (string-append "gen/var/www/htdocs/resources/images/section-title_" url-name ".svg"))
 	   (src (img-src (string-append "section-title_" (url-encode url-name) ".svg")))
 
 	   (dimensions (write-text-svg-with-shadow-to-file file-name label helios-svg 30 "#6b6c6f" "#dedee8"))
@@ -33,7 +33,7 @@
   (lambda (item)
     (let* ((url-name (url-encode (string-downcase item)))
 	   (label item); (string-titlecase item))
-	   (file-name (string-append "var/www/htdocs/resources/images/slide-caption_" url-name ".svg"))
+	   (file-name (string-append "gen/var/www/htdocs/resources/images/slide-caption_" url-name ".svg"))
 	   (src (img-src (string-append "slide-caption_" (url-encode url-name) ".svg")))
 
 	   (dimensions (write-text-svg-with-shadow-to-file file-name label helios-svg 16 "#6b6c6f" "#dedee8"))
@@ -48,7 +48,7 @@
   (lambda (item)
     (let* ((url-name (url-encode (string-downcase item)))
 	   (label item); (string-titlecase item))
-	   (file-name (string-append "var/www/htdocs/resources/images/project-title_" url-name ".svg"))
+	   (file-name (string-append "gen/var/www/htdocs/resources/images/project-title_" url-name ".svg"))
 	   (src (img-src (string-append "project-title_" (url-encode url-name) ".svg")))
 
 	   (dimensions (write-text-svg-with-shadow-to-file file-name label helios-svg 57 "#fff" "#4f5050"))
@@ -63,7 +63,7 @@
   (lambda (item)
     (let* ((url-name (url-encode (string-downcase item)))
 	   (label item); (string-titlecase item))
-	   (file-name (string-append "var/www/htdocs/resources/images/project-caption_" url-name ".svg"))
+	   (file-name (string-append "gen/var/www/htdocs/resources/images/project-caption_" url-name ".svg"))
 	   (src (img-src (string-append "project-caption_" (url-encode url-name) ".svg")))
 
 	   (dimensions (write-text-svg-with-shadow-to-file file-name label helios-svg 25 "#fff" "#4f5050"))
@@ -85,8 +85,8 @@
 	   (label (string-titlecase item))
 	   (href (string-append "https://www.s-expressions.org" location))
 	   
-	   (file-name (string-append "var/www/htdocs/resources/images/nav-tab_" url-name ".svg"))
-	   (select-file-name (string-append "var/www/htdocs/resources/images/nav-tab_" url-name "_select.svg"))
+	   (file-name (string-append "gen/var/www/htdocs/resources/images/nav-tab_" url-name ".svg"))
+	   (select-file-name (string-append "gen/var/www/htdocs/resources/images/nav-tab_" url-name "_select.svg"))
 
 	   (dimensions (begin (write-text-svg-to-file file-name label helios-svg 14 "#fff")
 			      (write-text-svg-to-file select-file-name label helios-svg 14 "#595959")))
@@ -99,7 +99,7 @@
 	   )
 
 
-      (cond ((string-prefix? location (string-append "/" *path*))
+      (cond ((string-prefix? location (string-append "/" (current-path)))
 	     `(div class: "k-project-tab"
 		(img  alt: ,label width: ,width height: ,height src: ,select-src))
 	     )
@@ -107,7 +107,7 @@
 	    ((and aliases
 		  (call/cc (lambda (return)
 			     (map (lambda (alias)
-				    (if (string-prefix? alias *path*) (return #t))
+				    (if (string-prefix? alias (current-path)) (return #t))
 				    )
 				  aliases)
 			     #f))
@@ -132,7 +132,7 @@
   (lambda (item)
     (let* ((url-name (url-encode (string-downcase item)))
 	   (label item); (string-titlecase item))
-	   (file-name (string-append "var/www/htdocs/resources/images/slide-title_" url-name ".svg"))
+	   (file-name (string-append "gen/var/www/htdocs/resources/images/slide-title_" url-name ".svg"))
 	   (src (img-src (string-append "slide-title_" (url-encode url-name) ".svg")))
 
 	   (dimensions (write-text-svg-with-shadow-to-file file-name label helios-svg 24 "#fff" "#4f5050"))
@@ -156,11 +156,11 @@
 	   (label (string-titlecase (irregex-replace/all "-" item " ")))
 	   (href (string-append "https://www.s-expressions.org" location))
 	   
-	   (file-name (string-append "var/www/htdocs/resources/images/nav-label_" url-name ".svg"))
-	   (highlight-file-name (string-append "var/www/htdocs/resources/images/nav-label_" url-name "_highlight.svg"))
-	   (select-file-name (string-append "var/www/htdocs/resources/images/nav-label_" url-name "_select.svg"))
+	   (file-name (string-append "gen/var/www/htdocs/resources/images/nav-label_" url-name ".svg"))
+	   (highlight-file-name (string-append "gen/var/www/htdocs/resources/images/nav-label_" url-name "_highlight.svg"))
+	   (select-file-name (string-append "gen/var/www/htdocs/resources/images/nav-label_" url-name "_select.svg"))
 
-	   (dimensions (begin (write-text-svg-to-file file-name label helios-svg 14 "#ccc")
+	   (dimensions (begin (write-text-svg-to-file file-name label helios-svg 14 "#EBEBEB" )
 			      (write-text-svg-to-file highlight-file-name label helios-svg 14 "#fff")))
 	   
 	   (width (number->string (car dimensions)))
@@ -173,7 +173,7 @@
 	   (id (string-append "nav-label_" (string-downcase item)))
 
 
-	   (is-location (string-prefix? location (string-append "/" *path*)))
+	   (is-location (string-prefix? location (string-append "/" (current-path))))
 	   )
 
       (cond (is-location `(img class: "k-simple-menu-label" alt: ,label width: ,width height: ,height src: ,src-highlight))

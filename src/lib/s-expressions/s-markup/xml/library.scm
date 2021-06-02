@@ -3,7 +3,6 @@
 	  (scheme write)
 	  (srfi-13)
 
-	  (chicken keyword)
 	  (chicken port)
 	  (regex)
 	  )
@@ -11,6 +10,17 @@
   (export display-xml write-xml)
 
   (begin 
+    (define keyword? 
+      (lambda (obj)
+	(and (symbol? obj)
+	     (equal? (car (reverse (string->list (symbol->string obj)))) #\: ))))
+    
+
+
+    (define keyword->string
+      (lambda (obj)
+	(list->string (reverse (cdr (reverse (string->list (symbol->string obj))))))))
+
 
     (define debug-xml-linebreak "")
 

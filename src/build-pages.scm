@@ -10,10 +10,12 @@
 	)
 
 (include "lib/s-expressions/s-markup/library.scm")
-(import	(s-expressions s-markup))
-
 (include "lib/s-expressions/s-markup/html/library.scm")
-(import	(s-expressions s-markup html))
+(include "lib/s-expressions/s-markup/xml/library.scm")
+(import	(s-expressions s-markup)
+	(s-expressions s-markup html)
+	(s-expressions s-markup xml)
+	)
 
 (include "url-encode.scm")
 (include "text-svg.scm")
@@ -79,6 +81,7 @@
       (create-directory (pathname-directory output-file))
 
       (with-output-to-file output-file (lambda () (display-html (eval page-template)) (newline)))
+      ;; ( (lambda () (display-html (eval page-template)) (newline)))
 
 
       )))

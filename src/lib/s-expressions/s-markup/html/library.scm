@@ -2,7 +2,6 @@
   (import (scheme base)
 	  (scheme write)
 
-	  ;; (chicken keyword)
 	  (chicken port)
 	  (regex)
 

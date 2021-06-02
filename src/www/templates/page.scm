@@ -54,7 +54,7 @@
 
 			   		       ,(include "www/templates/menu.scm")
 	
-			   		       ;; (div class: "k-separator")
+			   		       (div class: "k-separator")
 
 			   		     )))
 			   )

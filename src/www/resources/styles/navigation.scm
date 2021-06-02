@@ -25,96 +25,40 @@
    margin-left: "37px"
    )
 
+
   
   (".k-toolbutton"
    cursor: "default"
    float: "left" 
    height: "16px"
 
-   border-top: "1px solid #AF985E"
-   border-bottom: "1px solid #AF985E"
-   border-left: "1px solid #AF985E"
-   border-right: "1px solid #AF985E"
+   border: "1px solid #AF985E"
 
-   ;; background-color: "#8A794E"
-
-   margin-left: "6px"margin-right: "6px"margin-top: "23px"
-   ;; padding-top: "1px"
-
-   ;; padding-left: "1px"
-   ;; padding-right: "1px"
-
+   margin-left: "6px"
+   margin-right: "6px"
+   margin-top: "23px"
    )
   
-
-  ("a.k-toolbutton"
-   cursor: "pointer"
-   ;; background-image: ,(bg-url "page/navigation/toolbar-background.png")
-   )
-  ("a.k-toolbutton:hover" "div.k-toolbutton"
-   ;; background-image: ,(bg-url "page/navigation/toolbar-background-selected.png")
-   )
+  ("a.k-toolbutton" cursor: "pointer")
 
   (".k-toolbutton img"
    width: "17px"
-   height: "16px")
-
-  ("#k-home-button"
-   margin-left: "36px"
-   )
-
-  ("a#k-home-button img" 
+   height: "16px"
    background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
    background-size: "51px 32px"
-   background-position: "0px 0px"
+
+   background-position-y: "0px"
    )
-  ("a#k-home-button:hover img" "div#k-home-button img"
-   background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
-   background-size: "51px 32px"
-   background-position: "0px -16px"
-   )
- 
 
+  ("a.k-toolbutton:hover img" "div.k-toolbutton img" background-position-y: "-16px")
 
-  ("a#k-contact-button img" 
-   background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
-   background-size: "51px 32px"
-   background-position: "-17px -0px"
-   )
-  ("a#k-contact-button:hover img" "div#k-contact-button img"
-   background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
-   background-size: "51px 32px"
-   background-position: "-17px -16px"
-   )
- 
+  ("#k-home-button" margin-left: "36px")
+  ("#k-home-button img" background-position-x: "0px")
 
+  ("#k-contact-button img" background-position-x: "-17px")
 
-  ("a#k-site-map-button img" 
-   background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
-   background-size: "51px 32px"
-   background-position: "-34px 0px"
-   )
-  ("a#k-site-map-button:hover img" "div#k-site-map-button img"
-   background-image: ,(bg-url "page/navigation/toolbar_sprite.svg")
-   background-size: "51px 32px"
-   background-position: "-34px -16px"
-   )
-  
-
-
-
-  ;; ("a#k-home-button img" background-image: ,(bg-url "page/navigation/nav-icon_home.svg"))
-  ;; ("a#k-home-button:hover img" "div#k-home-button img" background-image: ,(bg-url "page/navigation/nav-icon_home_highlight.svg"))
-
-  ;; ("a#k-contact-button img" background-image: ,(bg-url "page/navigation/nav-icon_contact.svg"))
-  ;; ("a#k-contact-button:hover img" "div#k-contact-button img" background-image: ,(bg-url "page/navigation/nav-icon_contact_highlight.svg"))
-
-  ;; ("a#k-site-map-button img" background-image: ,(bg-url "page/navigation/nav-icon_site-map.svg"))
-  ;; ("a#k-site-map-button:hover img" "div#k-site-map-button img" background-image: ,(bg-url "page/navigation/nav-icon_site-map_highlight.svg"))
-
-  ("#k-site-map-button"
-   margin-right: "36px"
-   )
+  ("#k-site-map-button img" background-position-x: "-34px")
+  ("#k-site-map-button" margin-right: "36px")
   
   
 
@@ -129,7 +73,7 @@
    float: "left"
    height: "62px"
 
-   background-image: ,(bg-url "menu-simple-background.png")
+   background-image: ,(bg-url "page/navigation/menu-simple-background.png")
    )
 
   ("#k-complex-menu"
@@ -193,24 +137,10 @@
   ("a.k-secondary-menu-label:hover img" visibility:  "hidden")
 
 
-  ("a#nav-label_company:hover"      background-image:  ,(bg-url "nav-label_company_highlight.svg"))
-  ("a#nav-label_products:hover"     background-image:  ,(bg-url "nav-label_products_highlight.svg"))
-  ("a#nav-label_technologies:hover" background-image:  ,(bg-url "nav-label_technologies_highlight.svg"))
-  ("a#nav-label_support:hover"      background-image:  ,(bg-url "nav-label_support_highlight.svg"))
-  ("a#nav-label_contact:hover"      background-image:  ,(bg-url "nav-label_contact_highlight.svg"))
-  ("a#nav-label_my-account:hover"   background-image:  ,(bg-url "nav-label_my-account_highlight.svg"))
-
-  ("a#nav-label_domainmanager:hover" background-image:  ,(bg-url "nav-label_domainmanager_highlight.svg"))
-  ("a#nav-label_filegap:hover" background-image:  ,(bg-url "nav-label_filegap_highlight.svg"))
-
-  ("a#nav-label_autobsd:hover" background-image:  ,(bg-url "nav-label_autobsd_highlight.svg"))
-  ("a#nav-label_autocgi:hover" background-image:  ,(bg-url "nav-label_autocgi_highlight.svg"))
-  ("a#nav-label_automaton:hover" background-image:  ,(bg-url "nav-label_automaton_highlight.svg"))
-  ("a#nav-label_skate:hover" background-image:  ,(bg-url "nav-label_skate_highlight.svg"))
-  ("a#nav-label_gnosys:hover" background-image:  ,(bg-url "nav-label_gnosys_highlight.svg"))
-
-  ("#nav-label_cart" height: "16px" margin-left: "49px" margin-top: "9px" display: "inline-block")
-  ("a#nav-label_cart:hover img" visibility: "hidden")
+  ("a#nav-label_organization:hover"      background-image:  ,(bg-url "nav-label_organization_highlight.svg"))
+  ("a#nav-label_standards:hover"         background-image:  ,(bg-url "nav-label_standards_highlight.svg"))
+  ("a#nav-label_projects:hover"          background-image:  ,(bg-url "nav-label_projects_highlight.svg"))
+  ("a#nav-label_contact:hover"           background-image:  ,(bg-url "nav-label_contact_highlight.svg"))
 
 
   )
