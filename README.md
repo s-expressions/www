@@ -15,6 +15,7 @@ The goal of this project is to provide a website for the S-expressions organizat
 * Chicken 5.2.0
     * r7rs
     * regex
+    * srfi-19
 * ImageMagick 6.9.12.2
 
 ### Building the site

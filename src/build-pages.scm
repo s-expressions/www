@@ -1,6 +1,8 @@
 (import (r7rs)
 	(scheme time)
 	(srfi-13)
+	(srfi-19-date)
+	(srfi-19-io)
 
 	(chicken file)
 	(chicken file posix)
@@ -58,22 +60,22 @@
 
 (define page-paths (get-paths "src/www/content"))
 
-(display "page-paths: ")(write page-paths)(newline)
+
+
+
+
+
+
 
 
 
 (define page-template (with-input-from-file "src/www/templates/page.scm" (lambda () (read))))
 (define toolbar-template (with-input-from-file "src/www/templates/toolbar.scm" (lambda () (read))))
 
-(define build-page
-  (lambda (path)
+(define build-page-with-content
+  (lambda (path content)
 
-    (let ((content (with-input-from-file (string-append "src/www/content/" path ".scm") (lambda () (set! *current-path* path) 
-											     (eval (read))
-											     )))
-
-
-	  (output-file (string-append "gen/var/www/htdocs/pages/" path ".html" ))
+    (let ((output-file (string-append "gen/var/www/htdocs/pages/" path ".html" ))
 	  
 	  )
       (set! *current-content* content)
@@ -87,6 +89,14 @@
       )))
 
 
+(define build-page
+  (lambda (path)
+    (let ((content (with-input-from-file (string-append "src/www/content/" path ".scm") (lambda () (set! *current-path* path) 
+											     (eval (read))
+											     )))
+	  )
+      (build-page-with-content path content))))
+
 
 
 (define build-pages
@@ -96,3 +106,44 @@
     ))
 
 (build-pages)
+
+
+
+
+(define link-paths (let sort-paths ((remainder page-paths)
+				    (sorted-paths '())
+				    )
+		     (cond ((null? remainder) sorted-paths)
+			   ((null? sorted-paths) (sort-paths (cdr remainder) (list (car remainder))))
+			   ((string<=? (car remainder) (car sorted-paths)) (sort-paths (cdr remainder) (cons (car remainder) sorted-paths)))
+			   (else (sort-paths (cdr remainder) (cons (car sorted-paths) (sort-paths (list (car remainder)) (cdr sorted-paths))))))))
+
+
+(display "link-paths: ")(write link-paths)(newline)
+
+(let ((links (cons 'ul (map (lambda (path) `(li (a href: ,(pg-ref path) ,(pg-ref path)))) link-paths))))
+  
+  (let ((path "site-map")
+	(content `(section ,(section-title "Site Map") (main id: "k-sitemap" ,links))))
+    (build-page-with-content path content))
+
+  (let ((path "page-not-found")
+	(content `(section ,(section-title "Page Not Found")
+			   (main id: "k-sitemap" (p "We were unable to find the page you requested.  "
+						    "Please select one of the available links below:")
+				 ,links))))
+    (build-page-with-content path content)))
+
+
+
+(let* ((lastmod (format-date #f "~Y-~m-~d" (seconds->date (string->number (time-stamp)))))
+       (sitemap `((?xml version: "1.0" encoding: "UTF-8")
+		  ,(append '(urlset xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9")
+			   (map (lambda (path)
+				  `(url (loc ,(string-append (site-url) "/" path)) 
+					(lastmod ,lastmod)))
+				link-paths)))))
+
+  (with-output-to-file "gen/var/www/htdocs/resources/sitemap.xml" (lambda () (display-xml sitemap))))
+
+

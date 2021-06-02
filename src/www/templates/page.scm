@@ -75,7 +75,7 @@
 			 			 "© " 
 			 			 (!-- "$CURRENT_YEAR") 
 			 			 ;; (!--# config timefmt: "%Y")(!--# echo var: "date_local") 
-			 			 " S-expressions Organization")
+			 			 " The S-expressions organization")
 			      #\space
 			      (span class: "k-rights"
 			 	    "All Rights Reserved")

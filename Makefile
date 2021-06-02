@@ -41,6 +41,7 @@ req_pkg:
 #	if ! chicken-status -c | grep srfi-13; then doas chicken-install srfi-13; fi
 	if ! chicken-status -c | grep regex; then doas chicken-install regex; fi
 #	if ! chicken-status -c | grep symbol-utils; then doas chicken-install symbol-utils; fi
+	if ! chicken-status -c | grep srfi-19; then doas chicken-install srfi-19; fi
 
 	if ! pkg_info -e $(image_magick_pkg); then echo 'installing $(image_magick_pkg)'; doas pkg_add $(image_magick_pkg); fi
 
