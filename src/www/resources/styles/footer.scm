@@ -38,15 +38,18 @@
    )
   ("footer.k-site .k-rights"
    font-size: "10px"
-   color: "#bdbdbd"
+   ;; color: "#bdbdbd"
+   color: "#CCC"
    font-weight: "bold"	
    )
   ("footer.k-site a" "footer.k-site .k-bar"
    text-decoration: "none"	
-   color: "#CCC"
+   ;; color: "#CCC"
+   color: "#EBEBEB"
    )
   ("footer.k-site a:hover"
    color: "#FFF"
    )
 
   )
+
