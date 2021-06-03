@@ -12,9 +12,8 @@
 		   "Although valid atoms differ by context, they generally comprise numbers and symbols.")
 		(br)
 		(h2 "Ordered Pairs")
-		(p "An ordered pair can be represented by its 2 members separated by a whitespace delimited '.' enclosed by a pair of parenthesis.")
-
-		(p "An example of an ordered pair of atoms x and y can be represented as:")
+		(p "An ordered pair can be represented by its 2 members separated by a whitespace delimited '.' enclosed by a pair of parenthesis. "
+		   "For example, an ordered pair of atoms x and y can be represented as:")
 		(p "(x . y)")
 		(br)
 		(h2 "Lists")
@@ -32,26 +31,21 @@
 		(p "(x y z)" )
 
 		(br)
-
-		(br)
 		(h2 "List Processing (LISP)")
+		(p "Lists can be used to express a universal method of computation that invokes a function referenced "
+		   "by the first member of a list and supplies any remaining members as arguments to the function. "
+		   "For example, three factorial may be expressed as:")
+		(p "(* 3 2 1)")
+		(p "-or-")
+		(p "(factorial 3)")
+		(br)
+
+		(h2 "Universal Data Format")
 		(p "")
 		(br)
 
 		(h2 "Domain Specific Languages (DSLs)")
 		(p "")
 		(br)
-
-
-		(h2 "Alternative Syntax")
-		(p "")
-		(br)
-
-
-		(h2 "Data Format")
-		(p "")
-		(br)
-
-
 
 		))
