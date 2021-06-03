@@ -145,6 +145,43 @@
 
 
 
+;; (define menu-button
+;;   (lambda (item . rest )
+
+;;     (let* ((url-name (url-encode (string-downcase item)))
+;; 	   (location (string-append "/" item))
+;; 	   (is-catagory (if (> (length rest) 0) (list-ref rest 0) #f))
+
+
+;; 	   (label (string-titlecase (irregex-replace/all "-" item " ")))
+;; 	   (href (string-append "https://www.s-expressions.org" location))
+	   
+;; 	   (file-name (string-append "gen/var/www/htdocs/resources/images/nav-label_" url-name ".svg"))
+;; 	   (highlight-file-name (string-append "gen/var/www/htdocs/resources/images/nav-label_" url-name "_highlight.svg"))
+;; 	   (select-file-name (string-append "gen/var/www/htdocs/resources/images/nav-label_" url-name "_select.svg"))
+
+;; 	   (dimensions (begin (write-text-svg-to-file file-name label helios-svg 14 "#EBEBEB" )
+;; 			      (write-text-svg-to-file highlight-file-name label helios-svg 14 "#fff")))
+	   
+;; 	   (width (number->string (car dimensions)))
+;; 	   (height (number->string (cdr dimensions)))
+
+;; 	   (src (img-src (string-append "nav-label_" (url-encode url-name) ".svg")))
+;; 	   (src-highlight (img-src (string-append "nav-label_" (url-encode url-name) "_highlight.svg")))
+;; 	   (src-select (img-src (string-append "nav-label_" (url-encode url-name) "_select.svg")))
+
+;; 	   (id (string-append "nav-label_" (string-downcase item)))
+
+
+;; 	   (is-location (string-prefix? location (string-append "/" (current-path))))
+;; 	   )
+
+;;       (cond (is-location `(img class: "k-simple-menu-label" alt: ,label width: ,width height: ,height src: ,src-highlight))
+;; 	    (is-catagory `(a id: ,id class: "k-simple-menu-label" href: ,href
+;; 			     (img alt: ,label width: ,width height: ,height src: ,src-highlight)))
+;; 	    (else `(a id: ,id class: "k-simple-menu-label" href: ,href
+;; 		      (img alt: ,label width: ,width height: ,height src: ,src)))))))
+
 (define menu-button
   (lambda (item . rest )
 
@@ -176,9 +213,9 @@
 	   (is-location (string-prefix? location (string-append "/" (current-path))))
 	   )
 
-      (cond (is-location `(img class: "k-simple-menu-label" alt: ,label width: ,width height: ,height src: ,src-highlight))
+      (cond (is-location `(div class: "k-simple-menu-label"  ,label))
 	    (is-catagory `(a id: ,id class: "k-simple-menu-label" href: ,href
-			     (img alt: ,label width: ,width height: ,height src: ,src-highlight)))
+			     (div ,label)))
 	    (else `(a id: ,id class: "k-simple-menu-label" href: ,href
-		      (img alt: ,label width: ,width height: ,height src: ,src)))))))
+		      (div ,label)))))))
 

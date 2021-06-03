@@ -129,18 +129,28 @@
    height: "22px"
    )
 
-  ("a.k-simple-menu-label img" display: "block")
-  ("a.k-simple-menu-label:hover img" visibility:  "hidden")
-  ("a.k-primary-menu-label img" display: "block")
-  ("a.k-primary-menu-label:hover img" visibility:  "hidden")
-  ("a.k-secondary-menu-label img" display: "block")
-  ("a.k-secondary-menu-label:hover img" visibility:  "hidden")
+  ;; ("a.k-simple-menu-label img" display: "block")
+  ;; ("a.k-simple-menu-label:hover img" visibility:  "hidden")
+  ;; ("a.k-primary-menu-label img" display: "block")
+  ;; ("a.k-primary-menu-label:hover img" visibility:  "hidden")
+  ;; ("a.k-secondary-menu-label img" display: "block")
+  ;; ("a.k-secondary-menu-label:hover img" visibility:  "hidden")
 
 
-  ("a#nav-label_organization:hover"      background-image:  ,(bg-url "nav-label_organization_highlight.svg"))
-  ("a#nav-label_standards:hover"         background-image:  ,(bg-url "nav-label_standards_highlight.svg"))
-  ("a#nav-label_projects:hover"          background-image:  ,(bg-url "nav-label_projects_highlight.svg"))
-  ("a#nav-label_contact:hover"           background-image:  ,(bg-url "nav-label_contact_highlight.svg"))
+  ;; ("a#nav-label_organization:hover"      background-image:  ,(bg-url "nav-label_organization_highlight.svg"))
+  ;; ("a#nav-label_standards:hover"         background-image:  ,(bg-url "nav-label_standards_highlight.svg"))
+  ;; ("a#nav-label_projects:hover"          background-image:  ,(bg-url "nav-label_projects_highlight.svg"))
+  ;; ("a#nav-label_contact:hover"           background-image:  ,(bg-url "nav-label_contact_highlight.svg"))
 
+
+  ("a.k-simple-menu-label div" "div.k-simple-menu-label"
+   font-family: "'HeliosCondBold', 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed', 'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif"
+   font-size: "14px"
+   color: "#EBEBEB"
+   ;; text-shadow: "1px 1px 1px #5F5F5F"
+   )
+
+  ("a.k-simple-menu-label:hover div" color: "#FFF")
+  ("div.k-simple-menu-label" color: "#FFF" cursor: "default")
 
   )
