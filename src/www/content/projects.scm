@@ -1,1 +1,1 @@
-`(section ,(section-title "Projects"))
+`(section (h1 "Projects"))

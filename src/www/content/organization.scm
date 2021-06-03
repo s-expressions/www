@@ -1,4 +1,4 @@
-`(section ,(section-title "Organization")
+`(section (h1 "Organization")
 	  (main (p "The S-expressions organization is a group of individuals with a common "
 		   "interest in the use and promotion of S-expressions in various contexts.")
 

@@ -48,10 +48,14 @@ req_pkg:
 
 build: req_pkg bak_cfg chk_out $(favicon)
 	mkdir -p gen/etc gen/var gen/var/www/htdocs/resources/images
+	mkdir -p gen/etc gen/var gen/var/www/htdocs/resources/fonts
 
 	rsync -a src/www/config/etc/ gen/etc/
 	rsync -a src/www/config/var/ gen/var/
 	rsync -a --exclude="_design" src/www/resources/images/ gen/var/www/htdocs/resources/images/
+
+	rsync -a src/www/resources/fonts/*webfont.* gen/var/www/htdocs/resources/fonts/
+
 	rsync -a src/www/resources/scripts/*.js gen/var/www/htdocs/resources/scripts/
 
 	$(csi) -keyword-style none -s src/build-config.scm

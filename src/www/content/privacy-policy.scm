@@ -1,4 +1,4 @@
-`(section ,(section-title "Privacy Policy")
+`(section (h1 "Privacy Policy")
 
 	  (main (p "The S-expressions organization is committed to protecting your privacy.  "
 		   "In order to understand our practices related to personal data "

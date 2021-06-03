@@ -1,5 +1,19 @@
 `((@charset "UTF-8")
 
+  ("@font-face"
+   font-family: "'helioscondbold'";
+   src: "url('/fonts/helios-cond-bold-webfont.eot')"
+   src: "url('/fonts/helios-cond-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/helios-cond-bold-webfont.woff2') format('woff2'),
+         url('/fonts/helios-cond-bold-webfont.woff') format('woff'),
+         url('/fonts/helios-cond-bold-webfont.ttf') format('truetype'),
+         url('/fonts/helios-cond-bold-webfont.svg#helioscondbold') format('svg')"
+   font-weight: "normal"
+   font-style: "normal"
+
+   )
+
+
   ("main" display: "block") ;; needed for IE
 
   ("*"
@@ -146,6 +160,16 @@
 
   
   ;; /*********************************************************/
+
+  ("h1"
+   font-family: "'HeliosCondBold', 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed', 'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif"
+
+
+   font-size: "30px"
+   color: "#6b6c6f"
+   text-shadow: "2px 2px #dedee8"
+   )
+
 
   ("h1" 
    margin-left: "37px"
@@ -523,8 +547,8 @@
    )
   ("h1"
    font-weight: "normal"
-   font-size: "14px"
-   line-height: "14px"
+   ;; font-size: "14px"
+   ;; line-height: "14px"
    )
   ("h2"
    font-weight: "bold"

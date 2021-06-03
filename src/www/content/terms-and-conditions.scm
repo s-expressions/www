@@ -1,4 +1,4 @@
-`(section ,(section-title "Terms and Conditions")
+`(section (h1 "Terms and Conditions")
 
 	  (main (p "By using this site, you indicate that you accept these terms and conditions of use.")
 

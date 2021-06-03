@@ -1,4 +1,4 @@
-`(section ,(section-title "Standards")
+`(section (h1 "Standards")
 
 	  (main (p "The following are a list of technological standards developed and/or maintained by the S-expressions organization:")
 

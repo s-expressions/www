@@ -1,5 +1,4 @@
-`(section ,(section-title "Contact")
-
+`(section (h1 "Contact")
 	  (main  (br)
 		 (h2 "Email")
 	  	 (p "contact@s-expressions.org")
