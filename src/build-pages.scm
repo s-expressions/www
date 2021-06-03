@@ -124,11 +124,11 @@
 (let ((links (cons 'ul (map (lambda (path) `(li (a href: ,(pg-ref path) ,(pg-ref path)))) link-paths))))
   
   (let ((path "site-map")
-	(content `(section ,(section-title "Site Map") (main id: "k-sitemap" ,links))))
+	(content `(section (h1 "Site Map") (main id: "k-sitemap" ,links))))
     (build-page-with-content path content))
 
   (let ((path "page-not-found")
-	(content `(section ,(section-title "Page Not Found")
+	(content `(section (h1 "Page Not Found")
 			   (main id: "k-sitemap" (p "We were unable to find the page you requested.  "
 						    "Please select one of the available links below:")
 				 ,links))))
