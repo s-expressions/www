@@ -1,6 +1,13 @@
 rsync_ver = 3.2.3
 rsync_pkg = rsync-$(rsync_ver)
 
+curl_ver = 7.76.0
+curl_pkg = curl-$(curl_ver)
+
+git_ver = 2.31.1
+git_pkg = git-$(git_ver)
+
+
 chicken_ver = 5.2.0
 chicken_pkg = chicken-$(chicken_ver)
 csi = chicken-csi
@@ -25,7 +32,8 @@ favicon_dir = src/www/resources/icons/favicon
 favicon_src = $(favicon_dir)/favicon_64x64.png $(favicon_dir)/favicon_48x48.png $(favicon_dir)/favicon_32x32.png $(favicon_dir)/favicon_24x24.png $(favicon_dir)/favicon_16x16.png
 favicon = gen/$(icons_dir)/favicon.ico
 
-
+repos = $$(curl -s GET https://api.github.com/orgs/s-expressions/repos | grep "clone_url" | sed -e 's/.*s-expressions\/\(.*\)\.git\",/\1/')
+projects = $$(echo "$(repos)" | grep -v "www")
 
 .PHONY: all build install start stop uninstall clean test
 .PHONY: req_pkg bak_cfg chk_out
@@ -35,6 +43,8 @@ all: build
 
 req_pkg:
 	if ! pkg_info -e $(rsync_pkg); then echo 'installing $(rsync_pkg)'; doas pkg_add $(rsync_pkg); fi
+	if ! pkg_info -e $(curl_pkg); then echo 'installing $(curl_pkg)'; doas pkg_add $(curl_pkg); fi
+	if ! pkg_info -e $(git_pkg); then echo 'installing $(git_pkg)'; doas pkg_add $(git_pkg); fi
 
 	if ! pkg_info -e $(chicken_pkg); then echo 'installing $(chicken_pkg)'; doas pkg_add $(chicken_pkg); fi
 	if ! chicken-status -c | grep r7rs; then doas chicken-install r7rs; fi
@@ -47,6 +57,7 @@ req_pkg:
 
 
 build: req_pkg bak_cfg chk_out $(favicon)
+
 	mkdir -p gen/etc gen/var gen/var/www/htdocs/resources/images
 	mkdir -p gen/etc gen/var gen/var/www/htdocs/resources/fonts
 
@@ -113,9 +124,20 @@ $(www_bak):
 
 chk_out:
 	echo "checking out repositories..."
-	mkdir -p "gen/repo/pose.repo"
-	mkdir -p "gen/repo/s-mark.repo"
-	mkdir -p "gen/repo/twinjo.repo"
+
+	mkdir -p "repo/org.s-expressions"
+
+# 	cd "gen/repo/org.s-expressions" && \
+# 	for project in $(projects); \
+# 	do\
+# 		mkdir -p "$${project}"; cd "$${project}"; \
+# 		git pull || cd .. && rm -rf "$${project}" && git clone "https://github.com/s-expressions/$${project}.git"; \
+# 	done
+
+
+# 	echo "(" > gen/poject-list.s; for project in $(projects); do echo "\"$${project}\"" >> gen/poject-list.s; done; echo ")" >> gen/poject-list.s;
+
+
 
 
 $(favicon):

@@ -1,6 +1,6 @@
 `(section (h1 "S-expressions")
 
-	  (main (p "Also known as 'symbolic expressions' are a convenient way to represent structured data.")
+	  (main (p "Also known as 'symbolic expressions' are a type of notation used to represent structured data.")
 		(p "An S-expression can be defined recursively as one of the following:")
 		
 		(ol (li "An atom (described below) -or-")
@@ -12,7 +12,7 @@
 		   "Although valid atoms differ by context, they generally comprise numbers and symbols.")
 		(br)
 		(h2 "Ordered Pairs")
-		(p "An ordered pair can be represented by its 2 members separated by a whitespace delimited '.' enclosed by a pair of parenthesis. "
+		(p "An ordered pair can be represented by its two members separated by a whitespace delimited '.' enclosed by a pair of parenthesis. "
 		   "For example, an ordered pair of atoms x and y can be represented as:")
 		(p "(x . y)")
 		(br)

@@ -12,6 +12,8 @@ The goal of this project is to provide a website for the S-expressions organizat
 
 * OpenBSD 6.9
 * Rsync 3.3.3
+* Curl 7.76.0
+* Git 2.31.1
 * Chicken 5.2.0
     * r7rs
     * regex
