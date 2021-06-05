@@ -1,4 +1,4 @@
-# (S-EXPRESSIONS . ORG)
+# WWW
 
 This project is used to configure and build the s-expressions.org website.
 
