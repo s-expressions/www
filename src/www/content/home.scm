@@ -31,6 +31,40 @@
 		(p "(x y z)" )
 
 		(br)
+
+		(h2 "Trees")
+		(p "Nested lists can be used to represent the nodes of a tree structure of arbitrary complexity. "
+		   "For example, a simple binary tree can be represented as follows:")
+
+		(table (tr (td "(root")
+			   (td "(branch")
+			   (td "(leaf)")
+			   )
+		       (tr (td )
+			   (td )
+			   (td "(leaf))")
+			   )
+		       (tr (td)
+			   (td "(branch")
+			   (td "(leaf)")
+			   )
+		       (tr (td )
+			   (td )
+			   (td "(leaf)))")
+			   )
+		       )
+
+		(br)
+
+		(h2 "Cycles")
+		(p "In some contexts, a label may be assigned to an S-expression which can be referenced by other S-expressions. "
+		   "If an S-expression containes a reference to itself, it is said to comprise a 'cycle'. "
+		   "For example, a cycle containing the repeating symbols: o u r o b o r u s, can be represented as: "
+		   )
+		(p "#0=(o u r o b o r u s . #0#)")
+
+		(br)
+
 		(h2 "List Processing (LISP)")
 		(p "Lists can be used to express a universal method of computation that invokes a function referenced "
 		   "by the first member of a list and supplies any remaining members as arguments to the function. "
@@ -40,12 +74,5 @@
 		(p "(factorial 3)")
 		(br)
 
-		(h2 "Universal Data Format")
-		(p "")
-		(br)
-
-		(h2 "Domain Specific Languages (DSLs)")
-		(p "")
-		(br)
 
 		))

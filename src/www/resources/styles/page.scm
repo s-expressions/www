@@ -526,7 +526,11 @@
 
 
 
+  ("main *"
+   margin-left: "37px"
+   font-size: "14px"
 
+   )
 
 
 
