@@ -5,4 +5,6 @@
 		(p "We hope to provide useful information and tools to those who might benefit "
 		   "from using S-expressions in their daily lives.")
 
+		(p "Please "(a href: ,(pg-ref "contact") "contact") " us if you would like more information, or if "
+		   "you are interested in becoming a member.")
 	  ))

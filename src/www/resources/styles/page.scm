@@ -526,11 +526,6 @@
 
 
 
-  ("main *"
-   margin-left: "37px"
-   font-size: "14px"
-
-   )
 
 
 
@@ -567,6 +562,13 @@
   ("main h1" "main h2" "main h3"
    margin-left: "37px"
    )
+
+  ("main table"
+   margin-left: "37px"
+   font-size: "14px"
+
+   )
+
   ("table.example"
    font-size: "12px"
    width: "500px"
