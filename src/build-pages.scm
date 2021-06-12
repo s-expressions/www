@@ -80,7 +80,7 @@
 	  )
       (set! *current-content* content)
       (set! *current-path* path)
-      (create-directory (pathname-directory output-file))
+      (create-directory (pathname-directory output-file) #t)
 
       (with-output-to-file output-file (lambda () (display-html (eval page-template)) (newline)))
       ;; ( (lambda () (display-html (eval page-template)) (newline)))

@@ -125,7 +125,7 @@ $(www_bak):
 chk_out:
 	echo "checking out repositories..."
 
-	mkdir -p "repo/org.s-expressions"
+#	mkdir -p "repo/org.s-expressions"
 
 # 	cd "gen/repo/org.s-expressions" && \
 # 	for project in $(projects); \
