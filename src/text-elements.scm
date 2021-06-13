@@ -51,7 +51,8 @@
 	   (file-name (string-append "gen/var/www/htdocs/resources/images/project-title_" url-name ".svg"))
 	   (src (img-src (string-append "project-title_" (url-encode url-name) ".svg")))
 
-	   (dimensions (write-text-svg-with-shadow-to-file file-name label helios-svg 57 "#fff" "#4f5050"))
+	   (dimensions (write-text-svg-with-shadow-to-file file-name label helios-svg 57 "#fff" "#6E4F00"));;"#4f5050"
+
 	   (width (number->string (car dimensions)))
 	   (height (number->string (cdr dimensions)))
 	   )
@@ -66,7 +67,8 @@
 	   (file-name (string-append "gen/var/www/htdocs/resources/images/project-caption_" url-name ".svg"))
 	   (src (img-src (string-append "project-caption_" (url-encode url-name) ".svg")))
 
-	   (dimensions (write-text-svg-with-shadow-to-file file-name label helios-svg 25 "#fff" "#4f5050"))
+	   (dimensions (write-text-svg-with-shadow-to-file file-name label helios-svg 25 "#fff" "#6E4F00"));;"#4f5050"
+							   
 	   (width (number->string (car dimensions)))
 	   (height (number->string (cdr dimensions)))
 	   )
@@ -89,7 +91,7 @@
 	   (select-file-name (string-append "gen/var/www/htdocs/resources/images/nav-tab_" url-name "_select.svg"))
 
 	   (dimensions (begin (write-text-svg-to-file file-name label helios-svg 14 "#fff")
-			      (write-text-svg-to-file select-file-name label helios-svg 14 "#595959")))
+			      (write-text-svg-to-file select-file-name label helios-svg 14 "#8A794E")));;"#595959")))
 	   
 	   (width (number->string (car dimensions)))
 	   (height (number->string (cdr dimensions)))

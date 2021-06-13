@@ -24,11 +24,11 @@ function setPageHeight ()
 
 
 
-    var kPage = document.getElementById('k-page');
-    kPage.style.minHeight = minHeight.toString() + 'px';
-    kPage.style.marginTop = "-" + footerHeight.toString() + 'px';
-    kPage.style.marginBottom = "-" + footerHeight.toString() + 'px';
-    kPage.style.paddingTop = footerHeight.toString() + 'px';
+    var kPaper = document.getElementById('k-paper');
+    kPaper.style.minHeight = minHeight.toString() + 'px';
+    kPaper.style.marginTop = "-" + footerHeight.toString() + 'px';
+    kPaper.style.marginBottom = "-" + footerHeight.toString() + 'px';
+    kPaper.style.paddingTop = footerHeight.toString() + 'px';
 
 
 }

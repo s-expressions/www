@@ -52,7 +52,7 @@
    
    background-color: "#f8f8f8")
 
-  (".k-background" "#k-page" 
+  (".k-background" "#k-paper" 
    "header.k-site" "nav.k-site" "footer.k-site"
    "header.k-project" "nav.k-project" "footer.k-project"
    background-position: "center"
@@ -71,7 +71,7 @@
 
 
 
-  ("#k-page"
+  ("#k-paper"
    min-height: "2000px"  ;; /* min-height > "header.k-site + menu + content */		      
    height: "100%"
    margin-top: "-200px" margin-bottom: "-200px" padding-top: "200px"	;;/* use footer height */	
@@ -134,14 +134,13 @@
    background-color: "#f8f8f8"
    )
   ("a.k-project-tab"
-   border-top: "1px solid #828a93"
-   border-left: "1px solid #828a93"
-   border-right: "1px solid #828a93"
+   border-top: "1px solid #EBEBEB"
+   border-left: "1px solid #EBEBEB"
+   border-right: "1px solid #EBEBEB"
 
    height: "10px"
    margin-bottom: "-1px"
-   background-color: "#595959"
-
+   background-color: "#8A794E"
    )
 
   (".k-project-tab img"

@@ -4,6 +4,7 @@
 	(srfi-19-date)
 	(srfi-19-io)
 
+	(chicken port)
 	(chicken file)
 	(chicken file posix)
 	(chicken pathname )
@@ -38,7 +39,7 @@
     (string-append "S-expressions - " (string-titlecase (string-substitute* path '(("-" . " ") ("/" . ": ")))))))
 
 
-(define project-page? (lambda (path) #f))
+(define project-page? (lambda (path) (string-prefix? "projects/" path)))
 
 
 (define *current-content*)
@@ -59,28 +60,29 @@
 		       (directory dir)))))
 
 (define page-paths (get-paths "src/www/content"))
-
-
-
-
-
-
+;; (define page-paths '("projects/dsl/abstract"))
 
 
 
 
 (define page-template (with-input-from-file "src/www/templates/page.scm" (lambda () (read))))
-(define toolbar-template (with-input-from-file "src/www/templates/toolbar.scm" (lambda () (read))))
+
+
+
 
 (define build-page-with-content
   (lambda (path content)
 
     (let ((output-file (string-append "gen/var/www/htdocs/pages/" path ".html" ))
-	  
 	  )
+
       (set! *current-content* content)
       (set! *current-path* path)
       (create-directory (pathname-directory output-file) #t)
+
+
+;; (display "(current-content): ")(write (current-content))(newline)
+;; (exit 1)
 
       (with-output-to-file output-file (lambda () (display-html (eval page-template)) (newline)))
       ;; ( (lambda () (display-html (eval page-template)) (newline)))
@@ -124,14 +126,14 @@
 (let ((links (cons 'ul (map (lambda (path) `(li (a href: ,(pg-ref path) ,(pg-ref path)))) link-paths))))
   
   (let ((path "site-map")
-	(content `(section (h1 "Site Map") (main id: "k-sitemap" ,links))))
+	(content `((section (h1 "Site Map") (main id: "k-sitemap" ,links)))))
     (build-page-with-content path content))
 
   (let ((path "page-not-found")
-	(content `(section (h1 "Page Not Found")
+	(content `((section (h1 "Page Not Found")
 			   (main id: "k-sitemap" (p "We were unable to find the page you requested.  "
 						    "Please select one of the available links below:")
-				 ,links))))
+				 ,links)))))
     (build-page-with-content path content)))
 
 

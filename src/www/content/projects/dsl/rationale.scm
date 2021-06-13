@@ -1,4 +1,4 @@
-`(section (h1 "Rationale")
+`((section (h1 "Rationale")
 
-	  (main (p ""
-		   )))
+	   (main (p ""
+		    ))))
