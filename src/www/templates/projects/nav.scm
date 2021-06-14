@@ -1,21 +1,28 @@
-`(nav class: "k-project"
+(let* ((name (project-name (current-path)))
+       (project-nav-file (string-append "src/www/templates/projects/" name  "/nav.scm")))
 
-      (div class: "k-content"
+  (if (file-exists? project-nav-file)
+      (eval (with-input-from-file project-nav-file (lambda () (read))))
+     
+
+      `(nav class: "k-project"
+
+	    (div class: "k-content"
+		 
+		 (div id: "k-tabs"
+
+		      ,(project-tab "Abstract" (string-append "/projects/" name "/abstract"))
+
+		      ,(project-tab "Rationale" (string-append "/projects/" name "/rationale"))
+
+		      ,(project-tab "Specification" (string-append "/projects/" name "/specification"))
+
+		      ,(project-tab "Examples" (string-append "/projects/" name "/examples"))
+
+		      ,(project-tab "Library" (string-append "/projects/" name "/library"))
+
+		      
+		      )
+
 	   
-	   (div id: "k-tabs"
-
-		,(project-tab "Abstract" "/projects/dsl/abstract")
-
-		,(project-tab "Rationale" "/projects/dsl/rationale")
-
-		,(project-tab "Specification" "/projects/dsl/specification")
-
-		,(project-tab "Examples" "/projects/dsl/examples")
-
-		,(project-tab "Library" "/projects/dsl/library")
-
-	
-		)
-
-	   
-	   ))
+	   ))))

@@ -1,6 +1,5 @@
 `((@charset "UTF-8")
 
-  
   ("header.k-site" ;"header.k-site .k-content"
    ;; background-image: ,(bg-url "header-background.png")
    )
@@ -21,8 +20,8 @@
    border-radius: "8px"
    -web-kit-border-radius: "8px"
 
-   box-shadow: "2px 2px 2px #999, inset 0px 0px 2px 0px #888"
-   -webkit-box-shadow: "2px 2px 2px #999, inset 0px 0px 2px 0px #888"
+   box-shadow: "0px 1px 1px #999, inset 0px 0px 2px 0px #888"
+   -webkit-box-shadow: "0px 1px 1px #999, inset 0px 0px 2px 0px #888"
 
    overflow: "hidden"
    )

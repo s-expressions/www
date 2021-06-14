@@ -9,6 +9,7 @@
 	(chicken file posix)
 	(chicken pathname )
 	(chicken irregex)
+	(chicken string)
 	(regex)
 	)
 
@@ -40,7 +41,7 @@
 
 
 (define project-page? (lambda (path) (string-prefix? "projects/" path)))
-
+(define project-name (lambda (path) (cadr (reverse (string-split path "/")))))
 
 (define *current-content*)
 (define current-content (lambda () *current-content*))

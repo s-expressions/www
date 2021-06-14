@@ -103,14 +103,29 @@
    margin-top: "36px"
    margin-right: "50px"
    display: "block"
+
+
+   font-family: "'HeliosCondBold', 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed', 'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif"
+
+    color: "white"
+    font-size: "56px"
+    text-shadow: "0px 2px 1px #6e4f00"
+
    )
 
-  (".k-project-caption" 
+  (".k-project-description" 
    display: "block"
 ;   float: "right"
 
    margin-top: "37px"
    margin-right: "129px"
+
+
+   font-family: "'HeliosCondBold', 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed', 'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif"
+
+    color: "white"
+    font-size: "24px"
+    text-shadow: "0px 1px 1px #6e4f00"
    )
 
 
@@ -155,6 +170,24 @@
   ("nav.k-project .k-content"
    height: "30px"
    )
+
+("a.k-project-tab div" "div.k-project-tab div"
+   font-family: "'HeliosCondBold', 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed', 'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif"
+   font-size: "14px"
+   color: "#EBEBEB"
+   )
+
+("a.k-project-tab div" 
+   color: "#EBEBEB"
+   )
+( "div.k-project-tab div"
+   color: "#8A794E"
+   )
+
+
+  ("a.k-project-tab:hover div" color: "#FFF")
+  ("div.k-project-tab" color: "#FFF" cursor: "default")
+
 
 
   

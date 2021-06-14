@@ -3,11 +3,11 @@
 		     (div id: "margin-spacer" class: "k-separator"))
 
 
-	       `(,(include "www/templates/toolbar.scm")
+	       `(,(include "www/templates/site/nav/toolbar.scm")
 
 		 (div class: "k-separator")
 
-		 ,(include "www/templates/menu.scm")
+		 ,(include "www/templates/site/nav/menu.scm")
 
 		 (div class: "k-separator")
 
