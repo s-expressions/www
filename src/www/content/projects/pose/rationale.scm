@@ -130,7 +130,8 @@
 
 		 (p "The following table shows what different dialects do:")
 
-		 (table (tr (td "Common Lisp")(td "t")(td "nil"))
+		 (table class: "simple-border"
+			(tr (td "Common Lisp")(td "t")(td "nil"))
 			(tr (td "Emacs Lisp")(td "t")(td "nil"))
 			(tr (td "Autolisp")(td "t")(td "nil"))
 			(tr (td "Picolisp")(td "t")(td "nil"))

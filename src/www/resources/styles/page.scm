@@ -107,15 +107,15 @@
 
    font-family: "'HeliosCondBold', 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed', 'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif"
 
-    color: "white"
-    font-size: "56px"
-    text-shadow: "0px 2px 1px #6e4f00"
+   color: "white"
+   font-size: "56px"
+   text-shadow: "0px 2px 1px #6e4f00"
 
    )
 
   (".k-project-description" 
    display: "block"
-;   float: "right"
+					;   float: "right"
 
    margin-top: "37px"
    margin-right: "129px"
@@ -123,9 +123,10 @@
 
    font-family: "'HeliosCondBold', 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed', 'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif"
 
-    color: "white"
-    font-size: "24px"
-    text-shadow: "0px 1px 1px #6e4f00"
+   color: "white"
+   font-size: "24px"
+   text-shadow: "0px 1px 1px #6e4f00"
+   text-align: "left"
    )
 
 
@@ -171,18 +172,18 @@
    height: "30px"
    )
 
-("a.k-project-tab div" "div.k-project-tab div"
+  ("a.k-project-tab div" "div.k-project-tab div"
    font-family: "'HeliosCondBold', 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed', 'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif"
    font-size: "14px"
    color: "#EBEBEB"
    )
 
-("a.k-project-tab div" 
+  ("a.k-project-tab div" 
    color: "#EBEBEB"
    )
-( "div.k-project-tab div"
-   color: "#8A794E"
-   )
+  ( "div.k-project-tab div"
+    color: "#8A794E"
+    )
 
 
   ("a.k-project-tab:hover div" color: "#FFF")
@@ -235,7 +236,7 @@
   ("div.k-preview div"
    float: "left"
    width: "222px"
- 
+   
    margin-right: "10px"
    margin-bottom: "20px"
 
@@ -263,11 +264,11 @@
    font-size: "14px"
    padding-right: "20px"
    )
- ("div.k-preview td a"
-  color: "#333"
-  font-size: "14px"
+  ("div.k-preview td a"
+   color: "#333"
+   font-size: "14px"
 
-  )
+   )
 
   (".k-preview-title" 
    float: "left"
@@ -491,10 +492,10 @@
    width: "170px"
    )
 
- 
+  
 
   ("form.common input[type=radio]"
-  display: "inline-block"
+   display: "inline-block"
    vertical-align: "middle"
 
    margin-top: "1px"
@@ -677,7 +678,7 @@
    line-height: "1.5"
    )
 
- ("aside table" 
+  ("aside table" 
    font-size: "14px"
    width: "240px"
    border-collapse: "collapse"
@@ -700,6 +701,26 @@
   ;; /*********************************************************/
 
   
+
+  ("main table.simple td"
+   padding-right: "25px"
+   )
+  ("main table.simple tr"
+   height: "14px"
+   )
+
+
+  ("main table.simple-border"
+   border-collapse: "collapse"
+   )
+  ("main table.simple-border" "main table.simple-border td"
+   border-width: "1px"
+   border-style: "solid"
+   )
+  ("main table.simple-border td"
+   padding-left: "10px"
+   padding-right: "10px"
+   )
 
 
   )
