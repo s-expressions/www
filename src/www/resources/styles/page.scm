@@ -372,21 +372,31 @@
    margin-left: "12px"
    margin-top: "22px"
    display: "block"
+
+ font-family: "'HeliosCondBold', 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed', 'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif"
+
+   color: "white"
+   font-size: "24px"
+   text-shadow: "0px 1px 1px #6e4f00"
+   text-align: "left"
+
+
    )
   (".k-slide-header"
    width: "218px"
    height: "63px"
-   background: "#606164"
+   background: "#AF985E"
 
    border-top-left-radius: "5px"
    border-top-right-radius: "5px"
-   border-left: "1px solid #606164"
-   border-right: "1px solid #606164"
-   border-top: "1px solid #606164"
+   border-left: "1px solid #AF985E"
+   border-right: "1px solid #AF985E"
+   border-top: "1px solid #AF985E"
    )
   ("div.k-slide-body p"
    margin: "12px"
    font-size: "14px"
+   text-align: "left"
    )
   ("a.k-slide-link" 
    text-decoration: "underline"
