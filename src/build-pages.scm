@@ -82,9 +82,6 @@
       (create-directory (pathname-directory output-file) #t)
 
 
-;; (display "(current-content): ")(write (current-content))(newline)
-;; (exit 1)
-
       (with-output-to-file output-file (lambda () (display-html (eval page-template)) (newline)))
       ;; ( (lambda () (display-html (eval page-template)) (newline)))
 

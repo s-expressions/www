@@ -152,4 +152,7 @@
   ("a.k-simple-menu-label:hover div" color: "#FFF")
   ("div.k-simple-menu-label" color: "#FFF" cursor: "default")
 
+  ("a.k-simple-menu-label div.k-category"
+   color: "#FFF")
+
   )
