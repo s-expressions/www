@@ -5,7 +5,9 @@
 	   (div class: "k-slide-gallery"
 
 
-		(a style: "position:relative" class: "k-slide" href: ,(string-append (site-url) "/projects/dsl/overview") 
+		(a style: "position:relative" class: "k-slide" href: ,(string-append ;; (site-url) "/projects/dsl/overview"
+								       "https://www.dsl.s-expressions.org/overview"
+										     ) 
 		   (div class: "k-slide-header" 
 			(div class: "k-slide-title" "DSL")
 			)
@@ -18,19 +20,23 @@
 		   )
 
 
-		(a style: "position:relative" class: "k-slide" href: ,(string-append (site-url) "/projects/pose/abstract") 
+		(a style: "position:relative" class: "k-slide" href: ,(string-append ;; (site-url) "/projects/pose/abstract"
+								       "https://www.pose.s-expressions.org/abstract"
+								       ) 
 		   (div class: "k-slide-header" 
 			(div class: "k-slide-title" "POSE")
 			)
 		   (div class: "k-slide-body"
 			(p "(Portable S-expressions) ")
-			(p "Specification and librariess.")
+			(p "Specification and libraries.")
 			(span "learn more")
 			)
 		   ;; (div class: "k-slide-spacer")
 		   )
 
-		(a style: "position:relative" class: "k-slide" href: ,(string-append (site-url) "/projects/s-mark/overview") 
+		(a style: "position:relative" class: "k-slide" href: ,(string-append ;; (site-url) "/projects/s-mark/overview"
+								       "https://www.s-mark.s-expressions.org/overview"
+										     ) 
 		   (div class: "k-slide-header" 
 			(div class: "k-slide-title" "S-mark")
 			)
@@ -42,7 +48,9 @@
 		   ;; (div class: "k-slide-spacer")
 		   )
 
-		(a style: "position:relative" class: "k-slide" href: ,(string-append (site-url) "/projects/twinjo/overview") 
+		(a style: "position:relative" class: "k-slide" href: ,(string-append ;; (site-url) "/projects/twinjo/overview"
+								       "https://www.twinjo.s-expressions.org/overview"								       
+								       ) 
 		   (div class: "k-slide-header" 
 			(div class: "k-slide-title" "Twinjo")
 			)

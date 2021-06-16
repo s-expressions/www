@@ -49,7 +49,8 @@
 	   (aliases (if (> (length rest) 1) (list-ref rest 1) #f))
 
 	   (label (string-titlecase item))
-	   (href (string-append "https://www.s-expressions.org" location))
+	   ;; (href (string-append "https://www.s-expressions.org" location))
+	   (href (string-append "https://www." (project-name location) ".s-expressions.org" "/" url-name))
 	   
 	   (id (string-append "nav-tab_" item))				 
 	   )

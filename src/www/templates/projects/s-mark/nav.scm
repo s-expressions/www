@@ -4,7 +4,7 @@
 	   
 	   (div id: "k-tabs"
 
-		,(project-tab "Overview" "/projects/dsl/overview")
+		,(project-tab "Overview" "/projects/s-mark/overview")
 
 		)
 

@@ -7,7 +7,7 @@
 
 		   "portable S-expressions (POSE) " 
 		   (br) 
-		   "specification and librariess"
+		   "specification and libraries"
 
 		   )
 
