@@ -26,14 +26,6 @@
 (include "text-elements.scm")
 
 
-(define site-url (lambda () "https://www.s-expressions.org"))
-
-
-(define time-stamp (let ((time-stamp (number->string (inexact->exact (current-second)))))
-			 (lambda () time-stamp)))
-(define img-src (lambda (image-name) (string-append (site-url) "/images/" image-name "?" (time-stamp))))
-(define pg-ref (lambda (page-name) (string-append (site-url) "/" page-name)))
-
 
 (define get-title
   (lambda (path)
@@ -80,6 +72,24 @@
 		      ))
 
 	    ))))
+
+
+(define site-url (lambda () "https://www.s-expressions.org"))
+
+
+(define time-stamp (let ((time-stamp (number->string (inexact->exact (current-second)))))
+			 (lambda () time-stamp)))
+(define img-src (lambda (image-name) (string-append (site-url) "/images/" image-name "?" (time-stamp))))
+
+
+
+
+(define pg-ref (lambda (page-name) 
+		 (if (project-page? page-name)
+		     (string-append "https://www." (project-name page-name) ".s-expressions.org" (substring page-name (+ (string-length "projects/")
+															  (string-length (project-name page-name)))
+													     (string-length page-name)))
+		     (string-append (site-url) "/" page-name))))
 
 
 
@@ -180,7 +190,7 @@
        (sitemap `((?xml version: "1.0" encoding: "UTF-8")
 		  ,(append '(urlset xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9")
 			   (map (lambda (path)
-				  `(url (loc ,(string-append (site-url) "/" path)) 
+				  `(url (loc ,(pg-ref path)) 
 					(lastmod ,lastmod)))
 				link-paths)))))
 
