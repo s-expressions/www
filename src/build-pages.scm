@@ -160,7 +160,7 @@
 
 
 
-(define link-paths (let sort-paths ((remainder page-paths)
+(define link-paths (let sort-paths ((remainder (map pg-ref page-paths))
 				    (sorted-paths '())
 				    )
 		     (cond ((null? remainder) sorted-paths)
@@ -171,7 +171,7 @@
 
 (display "link-paths: ")(write link-paths)(newline)
 
-(let ((links (cons 'ul (map (lambda (path) `(li (a href: ,(pg-ref path) ,(pg-ref path)))) link-paths))))
+(let ((links (cons 'ul (map (lambda (path) `(li (a href: ,path ,path))) link-paths))))
   
   (let ((path "site-map")
 	(content `((section (h1 "Site Map") (main id: "k-sitemap" ,links)))))
@@ -190,7 +190,7 @@
        (sitemap `((?xml version: "1.0" encoding: "UTF-8")
 		  ,(append '(urlset xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9")
 			   (map (lambda (path)
-				  `(url (loc ,(pg-ref path)) 
+				  `(url (loc ,path)
 					(lastmod ,lastmod)))
 				link-paths)))))
 
