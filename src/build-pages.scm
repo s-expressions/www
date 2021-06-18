@@ -141,11 +141,10 @@
 
 (define build-page
   (lambda (path)
-    (let ((content (with-input-from-file (string-append "src/www/content/" path ".scm") (lambda () (set! *current-path* path) 
-											     (eval (read))
-											     )))
-	  )
-      (build-page-with-content path content))))
+    (set! *current-path* path) 
+    (build-page-with-content path (with-input-from-file (string-append "src/www/content/" path ".scm") read))
+    ))
+
 
 
 

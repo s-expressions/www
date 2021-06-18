@@ -1,11 +1,11 @@
-`((section (h1 "Projects")
+((section (h1 "Projects")
 
 	   (main (p "The following are a list of projects started and/or maintained by members of the S-expressions organization:")
 		 (br))
 	   (div class: "k-slide-gallery"
 
 
-		(a style: "position:relative" class: "k-slide" href: ,(pg-ref "projects/dsl/overview")
+		(a style: "position:relative" class: "k-slide" href:  "https://www.dsl.s-expressions.org/overview"
 		   (div class: "k-slide-header" 
 			(div class: "k-slide-title" "DSL")
 			)
@@ -18,7 +18,7 @@
 		   )
 
 
-		(a style: "position:relative" class: "k-slide" href: ,(pg-ref "projects/pose/abstract")
+		(a style: "position:relative" class: "k-slide" href:  "https://www.pose.s-expressions.org/abstract"
 		   (div class: "k-slide-header" 
 			(div class: "k-slide-title" "POSE")
 			)
@@ -30,7 +30,7 @@
 		   ;; (div class: "k-slide-spacer")
 		   )
 
-		(a style: "position:relative" class: "k-slide" href: ,(pg-ref "projects/s-mark/overview")
+		(a style: "position:relative" class: "k-slide" href:  "https://www.s-mark.s-expressions.org/overview"
 		   (div class: "k-slide-header" 
 			(div class: "k-slide-title" "S-mark")
 			)
@@ -42,7 +42,7 @@
 		   ;; (div class: "k-slide-spacer")
 		   )
 
-		(a style: "position:relative" class: "k-slide" href: ,(pg-ref "projects/twinjo/overview")
+		(a style: "position:relative" class: "k-slide" href:  "https://www.twinjo.s-expressions.org/overview"
 		   (div class: "k-slide-header" 
 			(div class: "k-slide-title" "Twinjo")
 			)
