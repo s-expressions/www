@@ -106,7 +106,7 @@
 			   (cond ((directory? file-path) (map (lambda (path)
 								(string-append file "/" path))
 							      (get-paths file-path)))
-				 ((equal? (pathname-extension file) "scm") (list (pathname-file file)))
+				 ((equal? (pathname-extension file) "s") (list (pathname-file file)))
 				 (else '()))))
 		       (directory dir)))))
 
@@ -142,7 +142,7 @@
 (define build-page
   (lambda (path)
     (set! *current-path* path) 
-    (build-page-with-content path (with-input-from-file (string-append "src/www/content/" path ".scm") read))
+    (build-page-with-content path (with-input-from-file (string-append "src/www/content/" path ".s") read))
     ))
 
 
