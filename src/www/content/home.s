@@ -32,6 +32,15 @@
 
 		(br)
 
+		(h2 "Association Lists")
+		(p "Lists of ordered pairs can be used to associate keys with values. "
+		   "For example the association of keys A, B and C with values 1, 2 and 3 can be represented as follows:")
+
+		(table (tr (td "(")(td "(A" #\space)(td ".")(td #\space "1)")(td ""))
+		       (tr (td "") (td "(B" #\space)(td ".")(td #\space "2)")(td ""))
+		       (tr (td "") (td "(C" #\space)(td ".")(td #\space "3)") (td ")")))
+		(br)
+
 		(h2 "Trees")
 		(p "Nested lists can be used to represent the nodes of a tree structure of arbitrary complexity. "
 		   "For example, a simple binary tree can be represented as follows:")
@@ -58,7 +67,7 @@
 
 		(h2 "Cycles")
 		(p "In some contexts, a label may be assigned to an S-expression which can be referenced by other S-expressions. "
-		   "If an S-expression containes a reference to itself, it is said to comprise a 'cycle'. "
+		   "If an S-expression contains a reference to itself, it is said to comprise a 'cycle'. "
 		   "For example, a cycle containing the repeating symbols: o u r o b o r u s, can be represented as: "
 		   )
 		(p "#0=(o u r o b o r u s . #0#)")
