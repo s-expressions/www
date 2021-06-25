@@ -5,17 +5,17 @@
 	   (div class: "k-slide-gallery"
 
 
-		(a style: "position:relative" class: "k-slide" href:  "https://www.dsl.s-expressions.org/overview"
-		   (div class: "k-slide-header" 
-			(div class: "k-slide-title" "DSL")
-			)
-		   (div class: "k-slide-body"
-			(p "(Domain Specific Languages) ")
-			(p "Specialized computer languages for use in particular application domains.")
-			(span "learn more")
-			)
-		   ;; (div class: "k-slide-spacer")
-		   )
+		;; (a style: "position:relative" class: "k-slide" href:  "https://www.dsl.s-expressions.org/overview"
+		;;    (div class: "k-slide-header" 
+		;; 	(div class: "k-slide-title" "DSL")
+		;; 	)
+		;;    (div class: "k-slide-body"
+		;; 	(p "(Domain Specific Languages) ")
+		;; 	(p "Specialized computer languages for use in particular application domains.")
+		;; 	(span "learn more")
+		;; 	)
+		;;    ;; (div class: "k-slide-spacer")
+		;;    )
 
 
 		(a style: "position:relative" class: "k-slide" href:  "https://www.pose.s-expressions.org/abstract"
