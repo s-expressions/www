@@ -1,3 +1,7 @@
+;;  This file is part of the 'WWW' project.
+;;  Copyright 2021 The S-expressions organization <contact@s-expressions.org> 
+;;  SPDX-License-Identifier: ISC
+
 ((section (h1 "S-expressions")
 
 	  (main (p "Also known as 'symbolic expressions' are a type of notation used to represent structured data.")

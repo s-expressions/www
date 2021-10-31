@@ -1,3 +1,7 @@
+<!-- This file is part of the 'WWW' project.
+     Copyright 2021 The S-expressions organization <contact@s-expressions.org> 
+     SPDX-License-Identifier: ISC
+-->
 # WWW
 
 This project is used to configure and build the s-expressions.org website.

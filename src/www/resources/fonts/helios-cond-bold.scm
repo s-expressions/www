@@ -1,3 +1,7 @@
+;;  This file is part of the 'WWW' project.
+;;  Copyright 2021 The S-expressions organization <contact@s-expressions.org> 
+;;  SPDX-License-Identifier: ISC
+
 '((?xml version: "1.0" standalone: "no")
   (!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd")
   (svg (metadata "Created by FontForge 20090914 at Mon Feb  2 04:35:44 2015\n"

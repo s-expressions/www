@@ -1,3 +1,7 @@
+;;  This file is part of the 'WWW' project.
+;;  Copyright 2021 The S-expressions organization <contact@s-expressions.org> 
+;;  SPDX-License-Identifier: ISC
+
 (let ((project-header-file (string-append "src/www/templates/projects/" (project-name (current-path)) "/header.scm")))
 
   (if (file-exists? project-header-file)

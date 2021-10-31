@@ -1,3 +1,7 @@
+;;  This file is part of the 'WWW' project.
+;;  Copyright 2021 The S-expressions organization <contact@s-expressions.org> 
+;;  SPDX-License-Identifier: ISC
+
 `(head (meta http-equiv: "Content-Type" content: "text/html; charset=UTF-8")
 			(meta name: "viewport" content: "width=762, user-scalable=yes")
 			(meta name: "format-detection" content: "telephone=no")

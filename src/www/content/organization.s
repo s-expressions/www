@@ -1,3 +1,7 @@
+;;  This file is part of the 'WWW' project.
+;;  Copyright 2021 The S-expressions organization <contact@s-expressions.org> 
+;;  SPDX-License-Identifier: ISC
+
 ((section (h1 "Organization")
 	  (main (p "The S-expressions organization is a group of individuals with a common "
 		   "interest in the use and promotion of S-expressions in various contexts.")

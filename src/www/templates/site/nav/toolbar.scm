@@ -1,3 +1,7 @@
+;;  This file is part of the 'WWW' project.
+;;  Copyright 2021 The S-expressions organization <contact@s-expressions.org> 
+;;  SPDX-License-Identifier: ISC
+
 (let ((toolbutton (lambda (name location alt)
 		      (let ((id (string-append "k-" name "-button"))
 			    (href (string-append "https://www.s-expressions.org" location)))
